@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BlogLoader.aspx.cs" Inherits="WTProject.BlogLoader" %>
 
-<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/blog-full.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 06:00:53 GMT -->
-<head>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 06:00:30 GMT -->
 <meta charset="utf-8">
 <title>Meeton - Conference & Event HTML5 Template | Our Blog</title>
 <!-- Stylesheets -->
@@ -126,9 +128,8 @@
     <section id="blog" class="blog-area section">
         <div class="auto-container">
             <div class="row">
-
                 <!-- Blog Left Side Begins -->
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-8">
                     <!-- Post -->
                     <div class="post-item wow" data-animation="fadeInUp" data-animation-delay="300">
                         <!-- Post Title -->
@@ -191,7 +192,152 @@
                     </div>	<!-- Pagination Ends-->
                 </div><!-- Blog Left Side Ends -->
                 
-
+                
+                <!-- Blog Sidebar Begins -->
+                <div class="col-md-4">
+                
+                    <div class="sidebar">
+                    
+                        <!-- Search -->
+                        <div class="search wow fadeInUp">
+                            <form>
+                                <input type="search" name="name" placeholder="SEARCH..">
+                                <input type="submit" value="submit">
+                            </form>
+                        </div>
+                        
+                        <!-- Popular Post -->
+                        <div class="blog/popular-post widget wow fadeInUp">
+                            <!-- Title -->
+                            <h2>most popular posts</h2>
+                            <ul class="popular-list">
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/1.jpg" alt="" /></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
+                                        <div class="posted-date">July 19, 2014</div>
+                                    </div>
+                                </li>
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/2.jpg" alt="" /></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
+                                        <div class="posted-date">July 19, 2014</div>
+                                    </div>
+                                </li>
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/3.jpg" alt="" /></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
+                                        <div class="posted-date">July 19, 2014</div>
+                                    </div>
+                                </li>
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/4.jpg" alt="" /></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
+                                        <div class="posted-date">July 19, 2014</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- Popular Post Ends-->
+                        
+                        <!-- Newest Posts -->
+                        <div class="blog/popular-post widget wow fadeInUp">
+                            <!-- Title -->
+                            <h2>Newest posts</h2>
+                            <ul class="popular-list">
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/1.jpg" alt="" /></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
+                                        <div class="posted-date">July 19, 2014</div>
+                                    </div>
+                                </li>
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/2.jpg" alt="" /></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
+                                        <div class="posted-date">July 19, 2014</div>
+                                    </div>
+                                </li>
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/3.jpg" alt="" /></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
+                                        <div class="posted-date">July 19, 2014</div>
+                                    </div>
+                                </li>
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/4.jpg" alt="" /></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
+                                        <div class="posted-date">July 19, 2014</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- Newest Post Ends-->
+                        
+                        
+                        <!-- Category Posts -->
+                        <div class="category widget wow fadeInUp">
+                            <!-- Title -->
+                            <h2>Categories</h2>
+                            <ul class="category-list">
+                                <li>
+                                    <h3><a href="#">Asset Protection</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">Bankruptcy</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">Bankruptcy Alternatives</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">Clients</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">Credit Cards</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">Pilates</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">Running</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">Estate Planning</a></h3>
+                                </li>
+                            </ul>
+                        </div><!-- Category Ends-->
+                        
+                    </div>
+                    
+                </div><!-- Blog Sidebar Ends -->
                 
             </div>
         
@@ -362,5 +508,5 @@ s0.parentNode.insertBefore(s1,s0);
 
 </body>
 
-<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/blog-full.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 06:00:53 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 06:00:31 GMT -->
 </html>
