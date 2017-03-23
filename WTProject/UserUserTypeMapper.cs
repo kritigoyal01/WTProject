@@ -5,7 +5,9 @@ using System.Web;
 
 namespace WTProject
 {
-    public class Class1
+    public class UserUserTypeMapper
     {
+        Users u;
+        UserType ut;
     }
 }
