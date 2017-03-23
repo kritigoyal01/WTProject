@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WTProject.Receipe" %>
 
-<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 05:55:33 GMT -->
-<head>
-<meta charset="utf-8">
-<title>Meeton - Conference & Event HTML5 Template | Home Page Style Three</title>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 05:53:49 GMT -->
+<meta charset="utf-8" />
+<title>Meeton - Conference & Event HTML5 Template | Home Page Style One</title>
 <!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/revolution-slider.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/revolution-slider.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
 <!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="css/responsive.css" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link href="css/responsive.css" rel="stylesheet"/>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
@@ -123,7 +126,7 @@
                 <ul>
                 	
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-1.jpg"  data-saveperformance="off"  data-title="Your Lead Power">
-                    <img src="images/main-slider/image-1.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                    <img src="images/main-slider/image-1.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"/> 
                     
                     <div class="tp-caption lfb tp-resizeme"
                     data-x="left" data-hoffset="350"
@@ -292,42 +295,44 @@
     </section>
     
     
-    <!--Features Section / Style Two -->
-    <section class="features-section style-two">
+    <!--Features Section-->
+    <section class="features-section">
     	<div class="auto-container">
         
-        	<div class="sec-title wow fadeInup" data-wow-delay="200ms" data-wow-duration="1000ms"><h2>How Meeton can help your business to grow</h2></div>
+        	<div class="sec-title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms"><h2>How Meeton can help your business to grow</h2></div>
             <div class="sec-text wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms"><p>Whatever the level of support you require, we are sure that we will have a  package <br>that meets your needs. </p></div>
         	
             <div class="row clearfix">
             
-            	<article class="col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+            	<article class="col-md-3 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
                 	<div class="inner">
-                        <div class="post-title">
-                            <div class="icon"><img src="images/icons/icon-money.png" alt="" title=""></div>
-                        	<h3>Money Back Guarantee</h3>
-                        </div>
-                        <div class="text"><p>All of our virtual professionals are highly experienced in the areas in which they work and have been through a recruitment process.</p></div>
+                        <div class="icon"><img src="images/icons/icon-money.png" alt="" title=""></div>
+                        <h3>Money Back Guarantee</h3>
+                        <div class="text"><p>All of our virtual professionals are highly experienced in the areas in which they work and have been through a thorough recruitment process.</p></div>
                 	</div>
                 </article>
                 
-                <article class="col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <article class="col-md-3 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms">
                 	<div class="inner">
-                        <div class="post-title">
-                            <div class="icon"><img src="images/icons/icon-ideas.png" alt="" title=""></div>
-                        	<h3>Brainstorming Ideas</h3>
-                        </div>
-                        <div class="text"><p>Using the outcomes from the Company Analysis, we will put together a plan for the most effective marketing strategy to get the best results.</p></div>
+                        <div class="icon"><img src="images/icons/icon-balancing.png" alt="" title=""></div>
+                        <h3>Virtual Balancing</h3>
+                        <div class="text"><p>We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start.</p></div>
                 	</div>
                 </article>
                 
-                <article class="col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                <article class="col-md-3 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
                 	<div class="inner">
-                        <div class="post-title">
-                            <div class="icon"><img src="images/icons/icon-analysis.png" alt="" title=""></div>
-                        	<h3>Virtual Statistic Analysis</h3>
-                        </div>
-                        <div class="text"><p>We will put together a detailed and specific style guide that covers all areas of your brand to ensure that anything produced in the future is on brand.</p></div>
+                        <div class="icon"><img src="images/icons/icon-saving.png" alt="" title=""></div>
+                        <h3>Save Meeting Times</h3>
+                        <div class="text"><p>All of our virtual professionals are highly experienced in the areas in which they work and have been through a thorough recruitment process.</p></div>
+                	</div>
+                </article>
+                
+                <article class="col-md-3 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                	<div class="inner">
+                        <div class="icon"><img src="images/icons/icon-schedule.png" alt="" title=""></div>
+                        <h3>Timeline &amp; Schedule</h3>
+                        <div class="text"><p>You require a receptionist service for extended hours or to include weekends or bank holidays then we have packages that cost up to £80 and with every package.</p></div>
                 	</div>
                 </article>
                 
@@ -335,35 +340,29 @@
         </div>
     </section>
     
-    <!--Two Column Fluid -->
-    <section class="two-column-fluid">
+    <!--Two Column Full Section-->
+    <section class="two-column-full">
     	
+        <!--Column-->
+        <article class="column wow rotateInDownLeft" data-wow-delay="0ms" data-wow-duration="1000ms" style="background-image:url(images/resource/image-1.jpg);">
+        	<div class="link"><a href="#" class="default-btn orange hvr-bounce-to-left">Plan an event</a></div>
+            <h4><a href="#">Check out our online eventmanager <span class="arrow">&rarr;</span></a></h4>
+            <div class="text"><p>Our teams are up to date with the latest technologies, media trends and are keen to prove themselves in this industry and that’s what you want from an advertising agency, not someone who is relying.</p></div>
+        </article>
         
-    	<div class="clearfix">
-        	
-            <article class="content-side wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-image:url(images/background/texture-1.jpg);">
-            	<div class="texture-layer" style="background-image:url(images/background/texture-map.png);"></div>
-                <div class="sec-title"><h2>Our events world wide</h2></div>
-                
-                <div class="text">
-                	<p>We have a number of different teams within our agency that specialise in different areas of business so you can be sure that you won’t receive a generic service and although we can’t boast years and years of service we can ensure you that is a good thing in this industry. Our teams are up to date with the latest technologies, media trends and are keen to prove themselves in this industry and that’s what you want from an advertising agency, not someone who is relying on the same way of doing things that worked 10 years, 5 years or even a year ago.</p>
-                </div>
-                
-            </article>
-            
-            <article class="image-side wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-image:url(images/resource/fluid-image.jpg);">
-                
-                <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right">SET UP A BUSINESS MEETING</a>
-                
-            </article>
-            
-        </div>
+        <!--Column-->
+        <article class="column wow rotateInDownRight" data-wow-delay="0ms" data-wow-duration="1000ms" style="background-image:url(images/resource/image-2.jpg);">
+        	<div class="link"><a href="#" class="default-btn blue hvr-bounce-to-left">SET UP A BUSINESS MEETING</a></div>
+            <h4><a href="#">Create your business meeting online <span class="arrow">&rarr;</span></a></h4>
+            <div class="text"><p>We have a number of different teams within our agency that specialise in different areas of business so you can be sure that you won’t receive a generic service.</p></div>
+        </article>
         
+        <div class="clearfix"></div>
     </section>
     
     
-    <!--Schedule Section / Style Two-->
-    <section class="schedule-section style-two">
+    <!--Schedule Section-->
+    <section class="schedule-section">
     	<div class="auto-container">
         	
             <div class="row clearfix">
@@ -373,7 +372,7 @@
             		<div class="sec-text wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms"><p>We will create a unique and visually pleasing logo to reflect your overall brand to be used in all areas of your marketing.</p></div>
                 </div>
                 
-                <div class="col-md-4 col-sm-12 col-xs-12 text-right wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class="col-md-4 col-sm-12 col-xs-12 text-right wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">
                 	<a href="#" class="download-btn theme-btn"><span class="fa fa-file-pdf-o"></span> DOWNLOAD .PDF schedule</a>
                 </div>
                 
@@ -407,7 +406,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -429,7 +428,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -451,7 +450,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -473,7 +472,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -495,51 +494,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">07:30 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to manage the startup income</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">09:00 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to create a susccessful startup company</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -566,7 +521,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -588,7 +543,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -610,7 +565,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -632,7 +587,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -654,51 +609,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">07:30 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to manage the startup income</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">09:00 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to create a susccessful startup company</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -725,7 +636,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -747,7 +658,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -769,7 +680,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -791,7 +702,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -813,51 +724,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">07:30 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to manage the startup income</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">09:00 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to create a susccessful startup company</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -884,7 +751,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -906,7 +773,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -928,7 +795,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -950,7 +817,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -972,51 +839,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">07:30 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to manage the startup income</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">09:00 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to create a susccessful startup company</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1043,7 +866,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1065,7 +888,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1087,7 +910,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1109,7 +932,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1131,51 +954,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">07:30 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to manage the startup income</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">09:00 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to create a susccessful startup company</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1202,7 +981,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1224,7 +1003,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1246,7 +1025,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1268,7 +1047,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1290,51 +1069,7 @@
                                 <br>
                                 <div class="row professional clearfix">
                                     <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">07:30 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to manage the startup income</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
-                                        <h5 class="prof-title">Laurence Francis</h5>
-                                        <h6 class="prof-occup">Speaker</h6>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        
-                                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right dull">10:00 - 12:00</a>
-                                        <a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>DETAILS ABOUT THE EVENT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hour-box">
-                            <div class="hour">09:00 PM</div>
-                            <div class="img-circle circle"><span></span></div>
-                            <div class="toggle-btn"><h3>How to create a susccessful startup company</h3></div>
-                            <div class="content-box">
-                                <div class="content"><p>Our most popular service is our Virtual Receptionist. We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business opportunity, so let us answer it for you. </p></div>
-                                <br>
-                                <div class="row professional clearfix">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 info">
-                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-2.jpg" alt=""></figure>
+                                        <figure class="img-circle image"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" alt=""></figure>
                                         <h5 class="prof-title">Laurence Francis</h5>
                                         <h6 class="prof-occup">Speaker</h6>
                                     </div>
@@ -1353,11 +1088,129 @@
                 <!--Tabs Box End-->
                 
             </div>
-            <!--Schedule Box End-->
-        
+            <!--Schedule Box End-->        
         </div>
     </section>
     
+    <!--Latest Events-->
+    <section class="latest-posts" style="background-image:url(images/background/texture-1.jpg);">
+    	<div class="texture-layer" style="background-image:url(images/background/texture-map.png);"></div>
+        
+    	<div class="auto-container">
+        	<div class="sec-title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms"><h2>Explore our latest events</h2></div>
+            
+            <div class="row clearfix">
+            	
+                <!--Post-->
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+                	<div class="inner">
+                    	<div class="upper">
+                        	<header class="post-title"><h3><a href="single-event.html">Business Meeting</a></h3></header>
+                            <div class="desc">
+                            	<div class="text">Using the outcomes from the Company Analysis, we will put together a plan.</div>
+                                <a href="single-event.html" class="more hvr-bounce-to-right"><span class="fa fa-play"></span></a>
+                                <br>
+                                <div class="info">23 March, 2015 / 213 participants</div>
+                            </div>
+                        </div>
+                        <figure class="post-image">
+                        	<img src="images/resource/post-image-1.jpg" alt="" title="">
+                            <div class="overlay"><div class="overlay-content"><p><a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right">READ DETAILS</a></p></div></div>
+                        </figure>
+                    </div>
+                </article>
+                <!--Post-->
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms">
+                	<div class="inner">
+                    	<div class="upper">
+                        	<header class="post-title"><h3><a href="single-event.html">Creative Presentation</a></h3></header>
+                            <div class="desc">
+                            	<div class="text">For more information on all of our services please take a look at the Services page of our website.</div>
+                                <a href="single-event.html" class="more hvr-bounce-to-right"><span class="fa fa-play"></span></a>
+                                <div class="info">23 March, 2015 / 213 participants</div>
+                            </div>
+                        </div>
+                        <figure class="post-image">
+                        	<img src="images/resource/post-image-2.jpg" alt="" title="">
+                            <div class="overlay"><div class="overlay-content"><p><a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right">READ DETAILS</a></p></div></div>
+                        </figure>
+                    </div>
+                </article>
+                <!--Post-->
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
+                	<div class="inner">
+                    	<div class="upper">
+                        	<header class="post-title"><h3><a href="single-event.html">Wordpres Course</a></h3></header>
+                            <div class="desc">
+                            	<div class="text">We will work with you to fully understand your business and your target audience.</div>
+                                <a href="single-event.html" class="more hvr-bounce-to-right"><span class="fa fa-play"></span></a>
+                                <br>
+                                <div class="info">23 March, 2015 / 213 participants</div>
+                            </div>
+                        </div>
+                        <figure class="post-image">
+                        	<img src="images/resource/post-image-3.jpg" alt="" title="">
+                            <div class="overlay"><div class="overlay-content"><p><a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right">READ DETAILS</a></p></div></div>
+                        </figure>
+                    </div>
+                </article>
+                <!--Post-->
+                <article class="col-lg-3 col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                	<div class="inner">
+                    	<div class="upper">
+                        	<header class="post-title"><h3><a href="single-event.html">Developer Meeting</a></h3></header>
+                            <div class="desc">
+                            	<div class="text">Using the outcomes from the Company Analysis, we will put together a plan.</div>
+                                <a href="single-event.html" class="more hvr-bounce-to-right"><span class="fa fa-play"></span></a>
+                                <br>
+                                <div class="info">23 March, 2015 / 213 participants</div>
+                            </div>
+                        </div>
+                        <figure class="post-image">
+                        	<img src="images/resource/post-image-4.jpg" alt="" title="">
+                            <div class="overlay"><div class="overlay-content"><p><a href="single-event.html" class="theme-btn btn-style-one hvr-bounce-to-right">READ DETAILS</a></p></div></div>
+                        </figure>
+                    </div>
+                </article>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+    <!--Feaature Listing-->
+    <section class="feature-listing">
+    	<div class="auto-container">
+            <div class="row clearfix">
+            	
+                <!--Image Side-->
+                <div class="col-md-5 col-sm-5 col-xs-12 pull-left image-side wow bounceInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                	<figure><img src="images/resource/mac-mockup.png" alt="" title=""></figure>
+                </div>
+                
+                <!--Content Side-->
+                <div class="col-md-7 col-sm-7 col-xs-12 pull-right content-side">
+                	<div class="sec-title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms"><h2>See the latest events online</h2></div>
+            		<div class="sec-text wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms"><p>Using the outcomes from the Company Analysis, we will put together a plan for the most effective marketing strategy.</p></div>
+                    
+                    <div class="check-listing listing">
+                    	<ul>
+                        	<li class="wow fadeInUp" data-wow-delay="0ms" data-wow-duration="500ms">We will put together a detailed and specific style guide </li>
+                            <li class="wow fadeInUp" data-wow-delay="100ms" data-wow-duration="500ms">We will create a unique and visually pleasing logo to reflect your overall brand</li>
+                            <li class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="500ms">We have the expertise to create just the right web presence for you</li>
+                            <li class="wow fadeInUp" data-wow-delay="300ms" data-wow-duration="500ms">We have the skills and resources to create professional films</li>
+                            <li class="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="500ms">We have a team of writers who specialise in writing end of year reports</li>
+                        </ul>
+                        <br>
+                        <a href="#" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>GET STARTED TODAY</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
     
     <!--Our Team-->
     <section class="team-section">
@@ -1458,98 +1311,8 @@
         </div>
     </section>
     
-    
-    <!--Default Section-->
-    <section class="default-section with-testimonials">
-    	<div class="auto-container">
-        	<div class="sec-title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms"><h2>What does our clients say?</h2></div>
-            
-        	<div class="row clearfix">
-            	
-                <!--Testimonials-->
-            	<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                	
-                    <div class="testimonials-area">
-                		<div class="slider">
-                    
-                            <article class="slide-item">
-                                <div class="testimonial-content">
-                                	<span class="curve"></span>
-                                    <p>We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you. Using the outcomes from the Company Analysis, we will put together a plan for the most effective marketing strategy to get the best results for your business.</p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <figure class="image img-circle"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" width="94" height="94" alt=""></figure>
-                                    <h5 class="author-title">White Williams</h5>
-                                    <p class="occupation">Sales Manager / CEO</p>
-                                    <p class="company">Stanfort Company Inc.</p>
-                                </div>
-                            </article>
-                            
-                            <article class="slide-item">
-                                <div class="testimonial-content">
-                                	<span class="curve"></span>
-                                    <p>We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you. Using the outcomes from the Company Analysis, we will put together a plan for the most effective marketing strategy to get the best results for your business. A plan for the most effective marketing strategy to get the best results for your business.</p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <figure class="image img-circle"><img class="img-circle" src="images/resource/testi-thumb-3.jpg" width="94" height="94" alt=""></figure>
-                                    <h5 class="author-title">Masum Rana</h5>
-                                    <p class="occupation">Graphic Designer</p>
-                                    <p class="company">Asian Developers Company Inc.</p>
-                                </div>
-                            </article>
-                            
-                            <article class="slide-item">
-                                <div class="testimonial-content">
-                                	<span class="curve"></span>
-                                    <p>We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you. Using the outcomes from the Company Analysis, we will put together a plan for the most effective marketing strategy to get the best results for your business.</p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <figure class="image img-circle"><img class="img-circle" src="images/resource/testi-thumb-1.jpg" width="94" height="94" alt=""></figure>
-                                    <h5 class="author-title">White Williams</h5>
-                                    <p class="occupation">Sales Manager / CEO</p>
-                                    <p class="company">Stanfort Company Inc.</p>
-                                </div>
-                            </article>
-                            
-                            <article class="slide-item">
-                                <div class="testimonial-content">
-                                	<span class="curve"></span>
-                                    <p>We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you. Using the outcomes from the Company Analysis, we will put together a plan for the most effective marketing strategy to get the best results for your business. A plan for the most effective marketing strategy to get the best results for your business.</p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <figure class="image img-circle"><img class="img-circle" src="images/resource/testi-thumb-3.jpg" width="94" height="94" alt=""></figure>
-                                    <h5 class="author-title">Masum Rana</h5>
-                                    <p class="occupation">Graphic Designer</p>
-                                    <p class="company">Asian Developers Company Inc.</p>
-                                </div>
-                            </article>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <!--Client Logos-->
-                <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                	
-                    <div class="client-logos">
-                		<div class="row clearfix">
-                    		<div class="col-md-6 col-sm-6 col-xs-6 logo-column"><a href="#"><img src="images/resource/client-logo-1.jpg" alt="" title=""></a></div>
-                            <div class="col-md-6 col-sm-6 col-xs-6 logo-column"><a href="#"><img src="images/resource/client-logo-2.jpg" alt="" title=""></a></div>
-                            <div class="col-md-6 col-sm-6 col-xs-6 logo-column"><a href="#"><img src="images/resource/client-logo-3.jpg" alt="" title=""></a></div>
-                            <div class="col-md-6 col-sm-6 col-xs-6 logo-column"><a href="#"><img src="images/resource/client-logo-4.jpg" alt="" title=""></a></div> 
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    
-    
-    <!--Price Plans / Style Two-->
-    <section class="price-plans style-two">
+    <!--Price Plans-->
+    <section class="price-plans">
     	<div class="auto-container">
             
             <div class="sec-title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms"><h2>Our plans and pricings</h2></div>
@@ -1559,14 +1322,14 @@
             <div class="row clearfix">
             	
                 <!--Table Column-->
-                <article class="col-md-3 col-sm-6 col-xs-12 table-column wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                	<div class="table-inner hvr-sweep-to-right">
+                <article class="col-md-6 col-sm-6 col-xs-12 table-column wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                	<div class="table-inner hvr-sweep-to-bottom">
                     	<div class="clearfix">
-                            <div class="half-column price">
+                            <div class="col-md-6 col-sm-12 col-xs-12 half-column price">
                                 <h4 class="amount"><sup>$</sup>29</h4>
                                 <p>ONE PERSON PASS</p>
                             </div>
-                            <div class="half-column list">
+                            <div class="col-md-6 col-sm-12 col-xs-12 half-column list">
                                 <h3>This includes:</h3>
                                 <ul>
                                     <li>free entrance</li>
@@ -1576,19 +1339,19 @@
                             </div>
                         </div>
                         
-                        <a href="#" class="read-more hvr-bounce-to-right"><span class="fa fa-play"></span> order now</a>
+                        <a href="#" class="read-more hvr-bounce-to-right"><span class="fa fa-play"></span></a>
                     </div>
                 </article>
                 
                 <!--Table Column-->
-                <article class="col-md-3 col-sm-6 col-xs-12 table-column recommended wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                	<div class="table-inner hvr-sweep-to-right">
+                <article class="col-md-6 col-sm-6 col-xs-12 table-column recommended wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                	<div class="table-inner hvr-sweep-to-bottom">
                     	<div class="clearfix">
-                            <div class="half-column price">
-                                <h4 class="amount"><sup>$</sup>49</h4>
+                            <div class="col-md-6 col-sm-12 col-xs-12 half-column price">
+                                <h4 class="amount"><sup>$</sup>59</h4>
                                 <p>TWO PERSON PASS</p>
                             </div>
-                            <div class="half-column list">
+                            <div class="col-md-6 col-sm-12 col-xs-12 half-column list">
                                 <h3>This includes:</h3>
                                 <ul>
                                     <li>2x free entrance</li>
@@ -1598,19 +1361,19 @@
                             </div>
                         </div>
                         
-                        <a href="#" class="read-more hvr-bounce-to-right"><span class="fa fa-play"></span> order now</a>
+                        <a href="#" class="read-more hvr-bounce-to-right"><span class="fa fa-play"></span></a>
                     </div>
                 </article>
                 
                 <!--Table Column-->
-                <article class="col-md-3 col-sm-6 col-xs-12 table-column wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                	<div class="table-inner hvr-sweep-to-right">
+                <article class="col-md-6 col-sm-6 col-xs-12 table-column wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                	<div class="table-inner hvr-sweep-to-bottom">
                     	<div class="clearfix">
-                            <div class="half-column price">
+                            <div class="col-md-6 col-sm-12 col-xs-12 half-column price">
                                 <h4 class="amount"><sup>$</sup>69</h4>
                                 <p>FAMILY SEASON PASS</p>
                             </div>
-                            <div class="half-column list">
+                            <div class="col-md-6 col-sm-12 col-xs-12 half-column list">
                                 <h3>This includes:</h3>
                                 <ul>
                                     <li>7 days free entrance</li>
@@ -1620,19 +1383,19 @@
                             </div>
                         </div>
                         
-                        <a href="#" class="read-more hvr-bounce-to-right"><span class="fa fa-play"></span> order now</a>
+                        <a href="#" class="read-more hvr-bounce-to-right"><span class="fa fa-play"></span></a>
                     </div>
                 </article>
                 
                 <!--Table Column-->
-                <article class="col-md-3 col-sm-6 col-xs-12 table-column wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                	<div class="table-inner hvr-sweep-to-right">
+                <article class="col-md-6 col-sm-6 col-xs-12 table-column wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                	<div class="table-inner hvr-sweep-to-bottom">
                     	<div class="clearfix">
-                            <div class="half-column price">
+                            <div class="col-md-6 col-sm-12 col-xs-12 half-column price">
                                 <h4 class="amount"><sup>$</sup>99</h4>
                                 <p>PREMIUM PASS</p>
                             </div>
-                            <div class="half-column list">
+                            <div class="col-md-6 col-sm-12 col-xs-12 half-column list">
                                 <h3>This includes:</h3>
                                 <ul>
                                     <li>1 year free entrance</li>
@@ -1642,7 +1405,7 @@
                             </div>
                         </div>
                         
-                        <a href="#" class="read-more hvr-bounce-to-right"><span class="fa fa-play"></span> order now</a>
+                        <a href="#" class="read-more hvr-bounce-to-right"><span class="fa fa-play"></span></a>
                     </div>
                 </article>
                 
@@ -1754,7 +1517,7 @@
             	<div class="row clearfix">
                 	
                     <!--Footer Logo-->
-                                        <div class="col-md-4 col-sm-4 col-xs-12 footer-logo wow bounceInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="col-md-4 col-sm-4 col-xs-12 footer-logo wow bounceInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                     	<a href="#"><img src="images/logo.png" alt=""></a>
                     </div>
                     
@@ -1788,6 +1551,11 @@
     
 </div>
 <!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top"></div>
+
+
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/revolution.min.js"></script>
@@ -1795,7 +1563,6 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/wow.js"></script>
-<script src="js/jquery.countdown.js"></script>
 <script src="js/script.js"></script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -1824,5 +1591,6 @@ s0.parentNode.insertBefore(s1,s0);
 
 </body>
 
-<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 05:55:37 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 05:54:58 GMT -->
 </html>
+

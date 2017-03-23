@@ -94,6 +94,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="BlogLoader.aspx" />
+    <Content Include="BlogPage.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -106,22 +110,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="about.html" />
     <Content Include="blog-detail.html" />
-    <Content Include="blog-full.html" />
-    <Content Include="blog-left-right.html" />
-    <Content Include="blog-left.html" />
-    <Content Include="blog.html" />
-    <Content Include="contact.html" />
     <Content Include="faq.html" />
     <Content Include="gallery-style-four.html" />
     <Content Include="gallery-style-one.html" />
     <Content Include="gallery-style-three.html" />
     <Content Include="gallery-style-two.html" />
-    <Content Include="index-2.html" />
-    <Content Include="index-3.html" />
-    <Content Include="index.html" />
-    <Content Include="Receipe.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="schedule-2.html" />
     <Content Include="schedule.html" />
     <Content Include="services.html" />
@@ -141,31 +136,43 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommentPostMapper.cs" />
-    <Compile Include="Comments.cs" />
-    <Compile Include="Cuisine.cs" />
-    <Compile Include="Feedback.cs" />
-    <Compile Include="Newsletter.cs" />
-    <Compile Include="Post.cs" />
-    <Compile Include="PostCuisineMapper.cs" />
-    <Compile Include="PostTagMapper.cs" />
-    <Compile Include="PostUserMapper.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rating.cs" />
-    <Compile Include="RatingPostMapper.cs" />
-    <Compile Include="RatingRatingValueMapper.cs" />
-    <Compile Include="RatingValue.cs" />
-    <Compile Include="Receipe.aspx.cs">
-      <DependentUpon>Receipe.aspx</DependentUpon>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Receipe.aspx.designer.cs">
-      <DependentUpon>Receipe.aspx</DependentUpon>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tags.cs" />
-    <Compile Include="Users.cs" />
-    <Compile Include="UserType.cs" />
-    <Compile Include="UserUserTypeMapper.cs" />
+    <Compile Include="BlogLoader.aspx.cs">
+      <DependentUpon>BlogLoader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogLoader.aspx.designer.cs">
+      <DependentUpon>BlogLoader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogPage.aspx.cs">
+      <DependentUpon>BlogPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogPage.aspx.designer.cs">
+      <DependentUpon>BlogPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />

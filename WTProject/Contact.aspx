@@ -1,8 +1,12 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WTProject.Contact" %>
+
 <!DOCTYPE html>
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <!DOCTYPE html>
 
 <!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 06:01:06 GMT -->
-<head>
 <meta charset="utf-8">
 <title>Meeton - Conference & Event HTML5 Template | Contact Us</title>
 <!-- Stylesheets -->
@@ -12,7 +16,7 @@
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="css/responsive.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet" >
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>

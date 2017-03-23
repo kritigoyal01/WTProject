@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="WTProject.About" %>
 
-<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 05:55:38 GMT -->
-<head>
-<meta charset="utf-8">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<meta charset="utf-8" />
 <title>Meeton - Conference & Event HTML5 Template | About Us</title>
 <!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/revolution-slider.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/revolution-slider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
 <!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="css/responsive.css" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href="css/responsive.css" rel="stylesheet" />
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
@@ -586,3 +588,4 @@ s0.parentNode.insertBefore(s1,s0);
 
 <!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 05:55:49 GMT -->
 </html>
+
