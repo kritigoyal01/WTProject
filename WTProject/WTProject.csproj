@@ -157,7 +157,6 @@
     <Compile Include="BlogPage.aspx.designer.cs">
       <DependentUpon>BlogPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
