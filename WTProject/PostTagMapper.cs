@@ -8,7 +8,7 @@ namespace WTProject
     public class PostTagMapper
     {
         Post p;
-        Tags t;
+        Tag t;
 
     }
 }

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RecipeBlog" Class="DBInteractiobDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=RecipeBlog;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="RecipeBlogConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Comments" Member="Comments">
+    <Type Name="Comment">
+      <Column Name="commentsid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="comments" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="postsid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Post_Comment" Member="Post" ThisKey="postsid" OtherKey="postsid" Type="Post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cuisine" Member="Cuisines">
+    <Type Name="Cuisine">
+      <Column Name="cuisineid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cuisinename" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Association Name="Cuisine_Post" Member="Posts" ThisKey="cuisineid" OtherKey="cuisineid" Type="Post" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Feedback" Member="Feedbacks">
+    <Type Name="Feedback">
+      <Column Name="feedbackid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="feedbackname" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="feedbackemail" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="feedbackmessage" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Newsletter" Member="Newsletters">
+    <Type Name="Newsletter">
+      <Column Name="newsid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="newstitle" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="newssubject" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="newscontent" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="header" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="footer" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Posts" Member="Posts">
+    <Type Name="Post">
+      <Column Name="postsid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="posttitle" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="cuisineid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="writtencontent" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="headerimage" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Post_Comment" Member="Comments" ThisKey="postsid" OtherKey="postsid" Type="Comment" />
+      <Association Name="Post_PostsTagMapper" Member="PostsTagMappers" ThisKey="postsid" OtherKey="postsid" Type="PostsTagMapper" />
+      <Association Name="Post_Rating" Member="Ratings" ThisKey="postsid" OtherKey="postsid" Type="Rating" />
+      <Association Name="Cuisine_Post" Member="Cuisine" ThisKey="cuisineid" OtherKey="cuisineid" Type="Cuisine" IsForeignKey="true" />
+      <Association Name="User_Post" Member="User" ThisKey="userid" OtherKey="userid" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PostsTagMapper" Member="PostsTagMappers">
+    <Type Name="PostsTagMapper">
+      <Column Name="tagsid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="postsid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Post_PostsTagMapper" Member="Post" ThisKey="postsid" OtherKey="postsid" Type="Post" IsForeignKey="true" />
+      <Association Name="Tag_PostsTagMapper" Member="Tag" ThisKey="tagsid" OtherKey="tagsid" Type="Tag" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rating" Member="Ratings">
+    <Type Name="Rating">
+      <Column Name="ratingid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ratingvalueid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="postsid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Post_Rating" Member="Post" ThisKey="postsid" OtherKey="postsid" Type="Post" IsForeignKey="true" />
+      <Association Name="RatingValue_Rating" Member="RatingValue" ThisKey="ratingvalueid" OtherKey="ratingvalueid" Type="RatingValue" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RatingValue" Member="RatingValues">
+    <Type Name="RatingValue">
+      <Column Name="ratingvalueid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ratingvalue" Member="ratingvalue1" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Association Name="RatingValue_Rating" Member="Ratings" ThisKey="ratingvalueid" OtherKey="ratingvalueid" Type="Rating" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tags" Member="Tags">
+    <Type Name="Tag">
+      <Column Name="tagsid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagname" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Association Name="Tag_PostsTagMapper" Member="PostsTagMappers" ThisKey="tagsid" OtherKey="tagsid" Type="PostsTagMapper" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="phone" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="pass" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="subscribed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="usertypeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="User_Post" Member="Posts" ThisKey="userid" OtherKey="userid" Type="Post" />
+      <Association Name="Usertype_User" Member="Usertype" ThisKey="usertypeid" OtherKey="usertypeid" Type="Usertype" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usertype" Member="Usertypes">
+    <Type Name="Usertype">
+      <Column Name="usertypeid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="uservalues" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Association Name="Usertype_User" Member="Users" ThisKey="usertypeid" OtherKey="usertypeid" Type="User" />
+    </Type>
+  </Table>
+</Database>

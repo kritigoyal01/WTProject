@@ -7,7 +7,7 @@ namespace WTProject
 {
     public class UserUserTypeMapper
     {
-        Users u;
+        User u;
         UserType ut;
     }
 }

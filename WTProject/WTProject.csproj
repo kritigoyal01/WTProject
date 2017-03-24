@@ -76,6 +76,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -98,10 +99,19 @@
     <Content Include="BlogLoader.aspx" />
     <Content Include="BlogPage.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Faq.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="DBInteraction.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBInteraction.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="DBInteraction.dbml.layout">
+      <DependentUpon>DBInteraction.dbml</DependentUpon>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,29 +120,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="blog-detail.html" />
-    <Content Include="faq.html" />
-    <Content Include="gallery-style-four.html" />
-    <Content Include="gallery-style-one.html" />
-    <Content Include="gallery-style-three.html" />
-    <Content Include="gallery-style-two.html" />
     <Content Include="Default.aspx" />
-    <Content Include="schedule-2.html" />
-    <Content Include="schedule.html" />
-    <Content Include="services.html" />
-    <Content Include="single-event.html" />
-    <Content Include="single-speaker.html" />
-    <Content Include="single-speakers.html" />
-    <Content Include="single-sponsors.html" />
-    <Content Include="speakers-2-col-styled.html" />
-    <Content Include="speakers-2-col.html" />
-    <Content Include="speakers-3-col-styled.html" />
-    <Content Include="speakers-3-col.html" />
-    <Content Include="speakers.html" />
-    <Content Include="sponsors.html" />
-    <Content Include="testimonials-v1.html" />
-    <Content Include="testimonials-v2.html" />
-    <Content Include="ticket.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -158,7 +146,6 @@
       <DependentUpon>BlogPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="CommentPostMapper.cs" />
-    <Compile Include="Comments.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,10 +153,18 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cuisine.cs" />
-    <Compile Include="Feedback.cs" />
-    <Compile Include="Newsletter.cs" />
-    <Compile Include="Post.cs" />
+    <Compile Include="DBInteraction.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBInteraction.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Faq.aspx.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faq.aspx.designer.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PostCuisineMapper.cs" />
     <Compile Include="PostTagMapper.cs" />
     <Compile Include="PostUserMapper.cs" />
@@ -181,12 +176,8 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Rating.cs" />
     <Compile Include="RatingPostMapper.cs" />
     <Compile Include="RatingRatingValueMapper.cs" />
-    <Compile Include="RatingValue.cs" />
-    <Compile Include="Tags.cs" />
-    <Compile Include="Users.cs" />
     <Compile Include="UserType.cs" />
     <Compile Include="UserUserTypeMapper.cs" />
   </ItemGroup>
@@ -195,6 +186,9 @@
     <Folder Include="fonts\" />
     <Folder Include="images\" />
     <Folder Include="js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

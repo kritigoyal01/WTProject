@@ -8,6 +8,6 @@ namespace WTProject
     public class PostUserMapper
     {
         Post p;
-        Users u;
+        User u;
     }
 }

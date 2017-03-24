@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Faq.aspx.cs" Inherits="WTProject.Faq" %>
 
-<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 05:55:50 GMT -->
-<head>
-<meta charset="utf-8">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<meta charset="utf-8" />
 <title>Meeton - Conference & Event HTML5 Template | Blog Details</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">

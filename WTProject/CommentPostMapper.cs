@@ -7,7 +7,7 @@ namespace WTProject
 {
     public class CommentPostMapper
     {
-        Comments c;
+        Comment c;
         Post p;
 
     }
