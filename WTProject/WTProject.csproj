@@ -100,6 +100,7 @@
     <Content Include="BlogPage.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Faq.aspx" />
+    <Content Include="MyProfile.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -164,6 +165,13 @@
     </Compile>
     <Compile Include="Faq.aspx.designer.cs">
       <DependentUpon>Faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="PostCuisineMapper.cs" />
     <Compile Include="PostTagMapper.cs" />
