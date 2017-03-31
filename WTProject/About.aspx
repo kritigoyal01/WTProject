@@ -29,7 +29,7 @@
     <header class="main-header">
     	<div class="auto-container clearfix">
         	<!--Logo-->
-            <div class="logo"><a href="index.html"><img src="images/logo.jpg" alt="Meeton" title="Meeton"></a></div>
+            <div class="logo"><a href="Default.aspx"><img src="images/logo.jpg" alt="Cook-a-roo" title="Cook-a-roo"></a></div>
             
             <!--Main Menu-->
             <nav class="main-menu">
@@ -44,70 +44,33 @@
                 
                 <div class="navbar-collapse collapse clearfix">                                                                                              
                     <ul class="navigation">
-                        <li class="dropdown"><a href="index.html">Home</a>
-                        	<ul class="submenu">
-                                <li><a href="index.html">Home Style One</a></li>
-                                <li><a href="index-2.html">Home Style Two</a></li>
-                                <li><a href="index-3.html">Home Style Three</a></li>
-                            </ul>
+                        <li><a href="Default.aspx">Home</a>          
                         </li>
-                        <li class="current dropdown"><a href="about.html">About</a>
+                        <li class="current"><a href="About.aspx">About</a>                            
+                        </li>
+                        <li><a href="BlogLoader.aspx">Posts</a></li>
+                            
+                        <li><a href="Faq.aspx">FAQ
+                            </a>
+                        </li>
+
+                        <li><a href="Profile.aspx">My Profile</a>                            
+                        </li>
+                        <%--<li class="dropdown"><a href="sponsors.html">Sponsors</a>
                             <ul class="submenu">
-                                <li><a href="services.html">Services</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#">pages</a>
-                            <ul class="submenu">
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li class="dropdown"><a href="testimonials-v1.html">Testimonials</a>
-                                    <ul class="submenu">
-                                        <li><a href="testimonials-v1.html">Testimonials V1</a></li>
-                                        <li><a href="testimonials-v2.html">Testimonials V2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="gallery-style-one.html">Gallery</a>
-                                    <ul class="submenu">
-                                        <li><a href="gallery-style-one.html">Gallery Style One</a></li>
-                                        <li><a href="gallery-style-two.html">Gallery Style Two</a></li>
-                                        <li><a href="gallery-style-three.html">Gallery Style Three</a></li>
-                                        <li><a href="gallery-style-four.html">Gallery Style Four</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="ticket.html">Ticket</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="schedule.html">Schedule</a>
-                            <ul class="submenu">
-                                <li><a href="schedule.html">Schedule Style One</a></li>
-                                <li><a href="schedule-2.html">Schedule Style Two</a></li>
-                                <li><a href="single-event.html">Single Event</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="speakers.html">Speakers</a>
-                            <ul class="submenu">
-                                <li><a href="speakers.html">Speakers Style One</a></li>
-                                <li><a href="speakers-2-col.html">Speakers Style Two</a></li>
-                                <li><a href="speakers-2-col-styled.html">Speakers Style Three</a></li>
-                                <li><a href="speakers-3-col.html">Speakers Style Four</a></li>
-                                <li><a href="speakers-3-col-styled.html">Speakers Style Five</a></li>
-                                <li><a href="single-speaker.html">Single Speaker</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="sponsors.html">Sponsors</a>
-                        	<ul class="submenu">
                                 <li><a href="single-sponsors.html">Single Sponsors</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="blog.html">Blog</a>
-                        	<ul class="submenu">
+                            <ul class="submenu">
                                 <li><a href="blog.html">Blog Style One</a></li>
                                 <li><a href="blog-full.html">Blog Style Two</a></li>
                                 <li><a href="blog-left-right.html">Blog Style Three</a></li>
                                 <li><a href="blog-left.html">Blog Style Four</a></li>
                                 <li><a href="blog-detail.html">Blog Details</a></li>
                             </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        </li>--%>
+                        <li><a href="Contact.aspx">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
@@ -559,19 +522,7 @@
 <script src="js/wow.js"></script>
 <script src="js/jquery.countdown.js"></script>
 <script src="js/script.js"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var $_Tawk_API={},$_Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/569cfc09aeafd72017dd6ea9/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
