@@ -11,7 +11,15 @@ namespace WTProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DBInteractiobDataContext dc = new DBInteractiobDataContext();
+            var posts = from a in dc.Posts
+                        select a;
 
+            foreach(var post in posts)
+            {
+                Response.Write(post.writtencontent);
+            }
         }
+
     }
 }
