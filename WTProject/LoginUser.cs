@@ -7,7 +7,7 @@ namespace WTProject
 {
     public class LoginUser
     {
-        public static User login(string name, string pass)
+        public static IEnumerable<User> login(string name, string pass)
         {
             DBInteractiobDataContext dc = new DBInteractiobDataContext();
             var u = from n in dc.Users
@@ -15,7 +15,7 @@ namespace WTProject
                      n.pass == pass
                      select n;
 
-            return u as User;
+            return u;
         }
     }
 }
