@@ -12,9 +12,8 @@
 <body>
     <form id="form1" runat="server">
         <div style="padding-right:500; padding-top:30"></div>
-        </div>
-        <center>
-        <asp:Login ID="Login1" runat="server" BackColor="#F7F6F3" BorderColor="#E6E2D8" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333" Height="219px" Width="487px">
+       <center>
+        <asp:Login ID="Login1" runat="server" BackColor="#F7F6F3" BorderColor="#E6E2D8" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333" Height="219px" Width="487px" OnAuthenticate="Login1_Authenticate">
             <CheckBoxStyle Font-Names="Calibri" />
             <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
             <LabelStyle Font-Names="Calibri" Font-Size="Medium" />
@@ -56,7 +55,7 @@
                                 </tr>
                                 <tr>
                                     <td align="right" colspan="2">
-                                        <asp:Button ID="LoginButton" runat="server" BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Ridge" BorderWidth="1px" CommandName="Login" Font-Names="Calibri" Font-Size="Large" ForeColor="#284775" OnClick="LoginButton_Click" Text="Log In" ValidationGroup="Login1" />
+                                        <asp:Button ID="LoginButton" runat="server" BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Ridge" BorderWidth="1px" CommandName="Login" Font-Names="Calibri" Font-Size="Large" ForeColor="#284775" Text="Log In" />
                                     </td>
                                 </tr>
                             </table>

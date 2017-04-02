@@ -96,11 +96,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin_ViewAllPosts.aspx" />
+    <Content Include="Admin_ViewComments.aspx" />
+    <Content Include="Admin_ViewCuisine.aspx" />
+    <Content Include="Admin_ViewFeedback.aspx" />
+    <Content Include="Admin_viewing.aspx" />
+    <Content Include="Admin_ViewRating.aspx" />
     <Content Include="BlogLoader.aspx" />
     <Content Include="BlogPage.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Faq.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MyProfile.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -133,6 +140,48 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ViewAllPosts.aspx.cs">
+      <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ViewAllPosts.aspx.designer.cs">
+      <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ViewComments.aspx.cs">
+      <DependentUpon>Admin_ViewComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ViewComments.aspx.designer.cs">
+      <DependentUpon>Admin_ViewComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ViewCuisine.aspx.cs">
+      <DependentUpon>Admin_ViewCuisine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ViewCuisine.aspx.designer.cs">
+      <DependentUpon>Admin_ViewCuisine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ViewFeedback.aspx.cs">
+      <DependentUpon>Admin_ViewFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ViewFeedback.aspx.designer.cs">
+      <DependentUpon>Admin_ViewFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_viewing.aspx.cs">
+      <DependentUpon>Admin_viewing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_viewing.aspx.designer.cs">
+      <DependentUpon>Admin_viewing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ViewRating.aspx.cs">
+      <DependentUpon>Admin_ViewRating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ViewRating.aspx.designer.cs">
+      <DependentUpon>Admin_ViewRating.aspx</DependentUpon>
     </Compile>
     <Compile Include="BlogLoader.aspx.cs">
       <DependentUpon>BlogLoader.aspx</DependentUpon>
@@ -176,6 +225,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginUser.cs" />
+    <Compile Include="MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PostCuisineMapper.cs" />
     <Compile Include="PostTagMapper.cs" />
     <Compile Include="PostUserMapper.cs" />

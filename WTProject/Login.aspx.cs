@@ -14,14 +14,33 @@ namespace WTProject
 
         }
 
-        protected void LoginButton_Click(object sender, EventArgs e)
+        private bool SiteSpecificAuthenticationMethod(string UserName, string Password)
         {
-            Response.Write("Click success");
-            User u = LoginUser.login(Login1.UserName, Login1.Password);
-            if(u != null)
+            try
             {
-                Response.Write(u.name + " has logged in.");
+                var u = LoginUser.login(Login1.UserName, Login1.Password);
+                if (u.Count() == 1)
+                {
+                    User i = u.First();
+                    Session.Add("user", i);
+                    return true;
+                }
+                else
+                    return false;
             }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+            bool Authenticated = false;
+            Authenticated = SiteSpecificAuthenticationMethod(Login1.UserName, Login1.Password);
+
+            e.Authenticated = Authenticated;
         }
     }
 }
