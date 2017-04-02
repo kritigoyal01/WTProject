@@ -92,27 +92,44 @@
             <div class="row">
                 <!-- Blog Left Side Begins -->
                 <div class="col-md-12">
-                    <br><br>
+                    
                     <div class="single-sponsors content">
-                        <div class="row">
+                        <div class="row form-group">
+                            <form runat="server">
                             <div class="col-lg-3 sponsors-image">
-                                <asp:Image ID="Image1" runat="server" ImageUrl="https://cdn3.vox-cdn.com/uploads/chorus_asset/file/7448945/arrival4.png" />   
+                                <asp:Image ID="Image1" runat="server" CssClass="img-rounded img-responsive" />   
+                               
+                                <small class="form-text text-muted">Change your picture</small>
+                                <asp:FileUpload ID="FileUpload1" runat="server" CssClass="form-control"/>
                             </div>
                             <div class="col-lg-6">
-                                <h2>Sponsors One</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil facilis saepe nam sequi, numquam, nisi! Reprehenderit quisquam ex esse facilis dolor est, quas earum ea, sunt, cupiditate vitae, cumque soluta ab quibusdam.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil facilis saepe nam sequi, numquam, nisi! Reprehenderit quisquam ex esse facilis dolor est, quas earum ea, sunt, cupiditate vitae, cumque soluta ab quibusdam.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil facilis saepe nam sequi, numquam, nisi! Reprehenderit quisquam ex esse facilis dolor est, quas earum ea, sunt, cupiditate vitae, cumque soluta ab quibusdam.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil facilis saepe nam sequi, numquam, nisi! Reprehenderit quisquam ex esse facilis dolor est, quas earum ea, sunt, cupiditate vitae, cumque soluta ab quibusdam.</p>
+                                <small id="emailHelp" class="form-text text-muted">To change your details, just re-enter them and press Enter.</small>
+                                
+                                <h2 id ="name" runat="server"></h2>
+                                <label>Full Name</label><asp:TextBox ID="TextBox1" runat="server" CssClass ="form-control"></asp:TextBox>
+             
+                                <br />
+                                <label>Phone</label><asp:TextBox ID="TextBox2" runat="server" CssClass ="form-control"></asp:TextBox>
+                                <br />
+                                <label>Email ID</label><asp:TextBox ID="TextBox3" runat="server" CssClass ="form-control"></asp:TextBox>
+                                <br />
+                                <label>Username</label><asp:TextBox ID="TextBox4" runat="server" CssClass ="form-control"></asp:TextBox>
+                                <br />
+                                <label>Gender</label><asp:DropDownList ID="DropDownList1" runat="server" CssClass ="form-control">
+                                        <asp:ListItem Value="M">Male</asp:ListItem>
+                                        <asp:ListItem Value="F">Female</asp:ListItem>
+                                    </asp:DropDownList>
+                                
                             </div>
+                            </form>
                             <div class="col-lg-3">
                                 <p>
-                                    <label>Type:</label> <br>
-                                    Platinum Sponsor
+                                    <label>Change Your Password</label>
+                                  
                                 </p>
                                 <p>
-                                    <label>Website:</label> <br>
-                                    <a href="#">www.website.com</a>
+                                    <label></label>
+                                    
                                 </p>
                                 <p>
                                     <label>Twitter:</label> <br>

@@ -13,12 +13,20 @@ namespace WTProject
         {
             if(Session["user"] == null)
             {
-                Response.Redirect("~/Login.aspx");
+                //Commented to stop redirection while in dev
+                //Response.Redirect("~/Login.aspx");
             }
+            //Commented cos upar waala is commented.
+            //User u = (User) Session["user"];
+            DBInteractiobDataContext dc = new DBInteractiobDataContext();
+            User u = dc.Users.First();
 
-            User u = (User) Session["user"];
-
-            Response.Write(u.name);
+            TextBox1.Text = u.name;
+            TextBox2.Text = u.phone.ToString();
+            TextBox3.Text = u.email;
+            TextBox4.Text = u.username;
+            Image1.ImageUrl = u.img;
+            DropDownList1.SelectedValue = u.gender;
         }
     }
 }

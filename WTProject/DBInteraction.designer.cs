@@ -57,12 +57,12 @@ namespace WTProject
     partial void InsertTag(Tag instance);
     partial void UpdateTag(Tag instance);
     partial void DeleteTag(Tag instance);
-    partial void InsertUser(User instance);
-    partial void UpdateUser(User instance);
-    partial void DeleteUser(User instance);
     partial void InsertUsertype(Usertype instance);
     partial void UpdateUsertype(Usertype instance);
     partial void DeleteUsertype(Usertype instance);
+    partial void InsertUser(User instance);
+    partial void UpdateUser(User instance);
+    partial void DeleteUser(User instance);
     #endregion
 		
 		public DBInteractiobDataContext() : 
@@ -167,19 +167,19 @@ namespace WTProject
 			}
 		}
 		
-		public System.Data.Linq.Table<User> Users
-		{
-			get
-			{
-				return this.GetTable<User>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Usertype> Usertypes
 		{
 			get
 			{
 				return this.GetTable<Usertype>();
+			}
+		}
+		
+		public System.Data.Linq.Table<User> Users
+		{
+			get
+			{
+				return this.GetTable<User>();
 			}
 		}
 	}
@@ -1725,6 +1725,120 @@ namespace WTProject
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Usertype")]
+	public partial class Usertype : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _usertypeid;
+		
+		private string _uservalues;
+		
+		private EntitySet<User> _Users;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnusertypeidChanging(int value);
+    partial void OnusertypeidChanged();
+    partial void OnuservaluesChanging(string value);
+    partial void OnuservaluesChanged();
+    #endregion
+		
+		public Usertype()
+		{
+			this._Users = new EntitySet<User>(new Action<User>(this.attach_Users), new Action<User>(this.detach_Users));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usertypeid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int usertypeid
+		{
+			get
+			{
+				return this._usertypeid;
+			}
+			set
+			{
+				if ((this._usertypeid != value))
+				{
+					this.OnusertypeidChanging(value);
+					this.SendPropertyChanging();
+					this._usertypeid = value;
+					this.SendPropertyChanged("usertypeid");
+					this.OnusertypeidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uservalues", DbType="VarChar(225)")]
+		public string uservalues
+		{
+			get
+			{
+				return this._uservalues;
+			}
+			set
+			{
+				if ((this._uservalues != value))
+				{
+					this.OnuservaluesChanging(value);
+					this.SendPropertyChanging();
+					this._uservalues = value;
+					this.SendPropertyChanged("uservalues");
+					this.OnuservaluesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usertype_User", Storage="_Users", ThisKey="usertypeid", OtherKey="usertypeid")]
+		public EntitySet<User> Users
+		{
+			get
+			{
+				return this._Users;
+			}
+			set
+			{
+				this._Users.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Users(User entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usertype = this;
+		}
+		
+		private void detach_Users(User entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usertype = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Users")]
 	public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1952,7 +2066,7 @@ namespace WTProject
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_img", DbType="VarChar(225)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_img", DbType="VarChar(8000)")]
 		public string img
 		{
 			get
@@ -2093,120 +2207,6 @@ namespace WTProject
 		{
 			this.SendPropertyChanging();
 			entity.User = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Usertype")]
-	public partial class Usertype : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _usertypeid;
-		
-		private string _uservalues;
-		
-		private EntitySet<User> _Users;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnusertypeidChanging(int value);
-    partial void OnusertypeidChanged();
-    partial void OnuservaluesChanging(string value);
-    partial void OnuservaluesChanged();
-    #endregion
-		
-		public Usertype()
-		{
-			this._Users = new EntitySet<User>(new Action<User>(this.attach_Users), new Action<User>(this.detach_Users));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usertypeid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int usertypeid
-		{
-			get
-			{
-				return this._usertypeid;
-			}
-			set
-			{
-				if ((this._usertypeid != value))
-				{
-					this.OnusertypeidChanging(value);
-					this.SendPropertyChanging();
-					this._usertypeid = value;
-					this.SendPropertyChanged("usertypeid");
-					this.OnusertypeidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uservalues", DbType="VarChar(225)")]
-		public string uservalues
-		{
-			get
-			{
-				return this._uservalues;
-			}
-			set
-			{
-				if ((this._uservalues != value))
-				{
-					this.OnuservaluesChanging(value);
-					this.SendPropertyChanging();
-					this._uservalues = value;
-					this.SendPropertyChanged("uservalues");
-					this.OnuservaluesChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usertype_User", Storage="_Users", ThisKey="usertypeid", OtherKey="usertypeid")]
-		public EntitySet<User> Users
-		{
-			get
-			{
-				return this._Users;
-			}
-			set
-			{
-				this._Users.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Users(User entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usertype = this;
-		}
-		
-		private void detach_Users(User entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usertype = null;
 		}
 	}
 }
