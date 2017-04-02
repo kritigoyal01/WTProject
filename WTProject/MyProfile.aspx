@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyProfile.aspx.cs" Inherits="WTProject.MyProfiel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyMyProfile.aspx.cs" Inherits="WTProject.MyProfiel" %>
 
 <!DOCTYPE html>
 
@@ -55,7 +55,7 @@
                             </a>
                         </li>
 
-                        <li class="current"><a href="MyProfile.aspx">My Profile</a>                            
+                        <li class="current"><a href="MyMyProfile.aspx">My Profile</a>                            
                         </li>
                         <%--<li class="dropdown"><a href="sponsors.html">Sponsors</a>
                             <ul class="submenu">
@@ -96,7 +96,7 @@
                     <div class="single-sponsors content">
                         <div class="row">
                             <div class="col-lg-3 sponsors-image">
-                                <img src="images/sponsors/1.png" alt="">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="https://cdn3.vox-cdn.com/uploads/chorus_asset/file/7448945/arrival4.png" />   
                             </div>
                             <div class="col-lg-6">
                                 <h2>Sponsors One</h2>

@@ -15,10 +15,10 @@ namespace WTProject
             {
                 Response.Redirect("~/Login.aspx");
             }
-            else
-            {
 
-            }
+            User u = (User) Session["user"];
+
+            Response.Write(u.name);
         }
     }
 }
