@@ -11,7 +11,6 @@ namespace WTProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         private bool SiteSpecificAuthenticationMethod(string UserName, string Password)
@@ -39,8 +38,9 @@ namespace WTProject
         {
             bool Authenticated = false;
             Authenticated = SiteSpecificAuthenticationMethod(Login1.UserName, Login1.Password);
-
+      
             e.Authenticated = Authenticated;
+           
         }
     }
 }

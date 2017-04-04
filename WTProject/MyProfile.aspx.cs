@@ -11,21 +11,56 @@ namespace WTProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["user"] == null)
+            if (Session["user"] == null)
             {
-                //Commented to stop redirection while in dev
-                //Response.Redirect("~/Login.aspx");
+                //Comment to stop redirection while in dev
+                Response.Redirect("~/Login.aspx");
             }
-            //Commented cos upar waala is commented.
-            //User u = (User) Session["user"];
-            DBInteractiobDataContext dc = new DBInteractiobDataContext();
-            User u = dc.Users.First();
 
+            if (this.Request.QueryString["RequestUrl"] == "~/ChangePassword.aspx")
+            {
+                Response.Write("Password changed successfully.");
+            }
+            //Locally storing User Object to render data and
+            //perform changes if necessarry.
+            User u = (User)Session["user"];
+
+            //Whenever user updates their profile picture
+            if (IsPostBack)
+            {
+                if (FileUpload1.HasFile)
+                {
+                    UpdateImage(u);
+                }
+            }
+
+            //Render the data into fields and stuff
+            ParseData(u);
+        }
+
+        protected void UpdateImage(User u)
+        {
+            try
+            {
+                DBInteractiobDataContext dc = new DBInteractiobDataContext();
+                string filename = FileUpload1.FileName;
+                FileUpload1.SaveAs(Server.MapPath("~/images/") + filename);
+                u.img = filename;
+                dc.SubmitChanges();
+            }
+            catch (Exception exc)
+            {
+                Response.Write("<script>alert('Some error occurred. Please Try later.');</script>");
+            }
+        }
+
+        protected void ParseData(User u)
+        {
             TextBox1.Text = u.name;
             TextBox2.Text = u.phone.ToString();
             TextBox3.Text = u.email;
             TextBox4.Text = u.username;
-            Image1.ImageUrl = u.img;
+            Image1.ImageUrl = "~/images/" + u.img;
             DropDownList1.SelectedValue = u.gender;
         }
     }

@@ -104,6 +104,7 @@
     <Content Include="Admin_ViewRating.aspx" />
     <Content Include="BlogLoader.aspx" />
     <Content Include="BlogPage.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Faq.aspx" />
     <Content Include="Login.aspx" />
@@ -117,6 +118,7 @@
       <LastGenOutput>DBInteraction.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="RegisterUser.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
     <None Include="DBInteraction.dbml.layout">
@@ -197,6 +199,13 @@
     <Compile Include="BlogPage.aspx.designer.cs">
       <DependentUpon>BlogPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CommentPostMapper.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -245,6 +254,14 @@
     </Compile>
     <Compile Include="RatingPostMapper.cs" />
     <Compile Include="RatingRatingValueMapper.cs" />
+    <Compile Include="RegisterUser.aspx.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterUser.aspx.designer.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement.cs" />
     <Compile Include="UserType.cs" />
     <Compile Include="UserUserTypeMapper.cs" />
     <Compile Include="WebForm1.aspx.cs">
