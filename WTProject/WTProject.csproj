@@ -145,42 +145,36 @@
     </Compile>
     <Compile Include="Admin_ViewAllPosts.aspx.cs">
       <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin_ViewAllPosts.aspx.designer.cs">
       <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_ViewComments.aspx.cs">
       <DependentUpon>Admin_ViewComments.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin_ViewComments.aspx.designer.cs">
       <DependentUpon>Admin_ViewComments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_ViewCuisine.aspx.cs">
       <DependentUpon>Admin_ViewCuisine.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin_ViewCuisine.aspx.designer.cs">
       <DependentUpon>Admin_ViewCuisine.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_ViewFeedback.aspx.cs">
       <DependentUpon>Admin_ViewFeedback.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin_ViewFeedback.aspx.designer.cs">
       <DependentUpon>Admin_ViewFeedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_viewing.aspx.cs">
       <DependentUpon>Admin_viewing.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin_viewing.aspx.designer.cs">
       <DependentUpon>Admin_viewing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_ViewRating.aspx.cs">
       <DependentUpon>Admin_ViewRating.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin_ViewRating.aspx.designer.cs">
       <DependentUpon>Admin_ViewRating.aspx</DependentUpon>
