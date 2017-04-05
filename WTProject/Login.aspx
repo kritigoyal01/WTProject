@@ -44,12 +44,12 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" style="font-family:Calibri;">
-                                        <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />
+                                    <td colspan="4" style="font-family:Calibri;padding-left:160px">
+                                       New User? <a href="RegisterUser.aspx">Register here</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="center" colspan="2" style="color:Red;">
+                                    <td align="center" colspan="4" style="color:Red;">
                                         <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
                                     </td>
                                 </tr>

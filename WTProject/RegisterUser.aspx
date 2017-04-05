@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyProfile.aspx.cs" Inherits="WTProject.MyProfiel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisterUser.aspx.cs" Inherits="WTProject.RegisterUser" %>
 
 <!DOCTYPE html>
 
@@ -55,7 +55,7 @@
                             </a>
                         </li>
 
-                        <li class="current"><a href="MyMyProfile.aspx">My Profile</a>                            
+                        <li class="current"><a href="MyProfile.aspx">My Profile</a>                            
                         </li>
                         <%--<li class="dropdown"><a href="sponsors.html">Sponsors</a>
                             <ul class="submenu">
@@ -79,7 +79,6 @@
             
         </div>
     </header>
-    <!-- Page Banner -->
     <section class="page-banner" style="background-image:url(images/background/page-banner.jpg);">
     	<div class="auto-container">
         	<h1>My Profile</h1>
@@ -97,9 +96,8 @@
                         <div class="row form-group">
                             <form id="imageform" runat="server">
                             <div class="col-lg-3 sponsors-image">
-                                <asp:Image ID="Image1" runat="server" CssClass="img-rounded img-responsive" />   
-                               
-                                <small class="form-text text-muted">Change your picture</small>
+                                <img class="img-responsive img-thumbnail" src="images/default-avatar.png" alt="Default Avatar" />
+                                <small class="form-text text-muted">Add your picture</small>
                                 <asp:FileUpload onchange="CheckSubmit()" ID="FileUpload1"  runat="server" CssClass="form-control"/>
                             </div>
                             <div class="col-lg-6">
@@ -109,7 +107,11 @@
                                 <label>Full Name</label><asp:TextBox ID="TextBox1" runat="server" CssClass ="form-control"></asp:TextBox>
              
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Field cannot be left blank." ForeColor="#FF3300"></asp:RequiredFieldValidator>
-             
+                                <br />
+                                <label>Password</label><asp:TextBox ID="Password" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                                <br />
+                                <label>Confirm Password</label><asp:TextBox ID="ConfirmPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                                <asp:CompareValidator ID="CompareValidator1" ControlToValidate="ConfirmPassword" ControlToCompare="Password" runat="server" ErrorMessage="Passwords do not match."></asp:CompareValidator>
                                 <br />
                                 <label>Phone</label><asp:TextBox ID="TextBox2" TextMode="Phone" runat="server" CssClass ="form-control"></asp:TextBox>
                                 <br />
@@ -123,27 +125,10 @@
                                         <asp:ListItem Value="M">Male</asp:ListItem>
                                         <asp:ListItem Value="F">Female</asp:ListItem>
                                     </asp:DropDownList>
-                                
+                                <br />
+                                <asp:Button ID="Button1" runat="server" Text="Register" Width="100px" Height="60px" CssClass="btn btn-info pull-right" OnClick="Button1_Click"/>
                             </div>
                             </form>
-                            <div class="col-lg-3">
-                                <p>
-                                    <label><a href="ChangePassword.aspx">Change Your Password</a></label>
-                                  
-                                </p>
-                                <p>
-                                    <label></label>
-                                    
-                                </p>
-                                <p>
-                                    <label>Twitter:</label> <br>
-                                    <a href="#">@twitter</a>
-                                </p>
-                                <p>
-                                    <label>Facebook:</label> <br>
-                                    <a href="#">@Facebook</a>
-                                </p>
-                            </div>
                         </div>
                     </div>                
                 </div><!-- Blog Left Side Ends -->
@@ -242,7 +227,7 @@
             	<div class="row clearfix">
                 	
                     <!--Footer Logo-->
-                                        <div class="col-md-4 col-sm-4 col-xs-12 footer-logo wow bounceInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                     <div class="col-md-4 col-sm-4 col-xs-12 footer-logo wow bounceInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                     	<a href="#"><img src="images/logo.png" alt=""></a>
                     </div>
                     
@@ -275,11 +260,7 @@
     </footer>
     
 </div>
-<!--End pagewrapper-->
-
-<!--Scroll to top-->
 <div class="scroll-to-top"></div>
-
 
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script>
@@ -290,8 +271,6 @@
 <script src="js/wow.js"></script>
 <script src="js/jquery.countdown.js"></script>
 <script src="js/script.js"></script>
-<!--Start of Tawk.to Script-->
-<!--End of Tawk.to Script-->
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -303,16 +282,8 @@
   ga('send', 'pageview');
 
 </script>
-<script>
-    function CheckSubmit()
-    {
-        if($("#FileUpload1").value != '')
-        {
-            $("#imageform").submit();
-        }
-    }
-</script>
+
 </body>
 
-<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/single-sponsors.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 06:00:30 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 05:55:49 GMT -->
 </html>

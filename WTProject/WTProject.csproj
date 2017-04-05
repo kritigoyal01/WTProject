@@ -96,18 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Admin_Posts.aspx" />
-    <Content Include="Admin_Comments.aspx" />
-    <Content Include="Admin_Cuisine.aspx" />
-    <Content Include="Admin_Feedback.aspx" />
-    <Content Include="Admin_Main_Page.aspx" />
-    <Content Include="Admin_Rating.aspx" />
-    <Content Include="Admin_RatingValue.aspx" />
-    <Content Include="Admin_Users.aspx" />
+    <Content Include="Admin_ViewAllPosts.aspx" />
+    <Content Include="Admin_ViewComments.aspx" />
+    <Content Include="Admin_ViewCuisine.aspx" />
+    <Content Include="Admin_ViewFeedback.aspx" />
+    <Content Include="Admin_viewing.aspx" />
+    <Content Include="Admin_ViewRating.aspx" />
     <Content Include="BlogLoader.aspx" />
     <Content Include="BlogPage.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
-    <Content Include="CuisineForm.aspx" />
     <Content Include="Faq.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyProfile.aspx" />
@@ -120,9 +118,7 @@
       <LastGenOutput>DBInteraction.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="PostsForm.aspx" />
-    <Content Include="RatingForm.aspx" />
-    <Content Include="RatingValueForm.aspx" />
+    <Content Include="RegisterUser.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
     <None Include="DBInteraction.dbml.layout">
@@ -147,61 +143,47 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Posts.aspx.cs">
-      <DependentUpon>Admin_Posts.aspx</DependentUpon>
+    <Compile Include="Admin_ViewAllPosts.aspx.cs">
+      <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_Posts.aspx.designer.cs">
-      <DependentUpon>Admin_Posts.aspx</DependentUpon>
+    <Compile Include="Admin_ViewAllPosts.aspx.designer.cs">
+      <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Comments.aspx.cs">
-      <DependentUpon>Admin_Comments.aspx</DependentUpon>
+    <Compile Include="Admin_ViewComments.aspx.cs">
+      <DependentUpon>Admin_ViewComments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_Comments.aspx.designer.cs">
-      <DependentUpon>Admin_Comments.aspx</DependentUpon>
+    <Compile Include="Admin_ViewComments.aspx.designer.cs">
+      <DependentUpon>Admin_ViewComments.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Cuisine.aspx.cs">
-      <DependentUpon>Admin_Cuisine.aspx</DependentUpon>
+    <Compile Include="Admin_ViewCuisine.aspx.cs">
+      <DependentUpon>Admin_ViewCuisine.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_Cuisine.aspx.designer.cs">
-      <DependentUpon>Admin_Cuisine.aspx</DependentUpon>
+    <Compile Include="Admin_ViewCuisine.aspx.designer.cs">
+      <DependentUpon>Admin_ViewCuisine.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Feedback.aspx.cs">
-      <DependentUpon>Admin_Feedback.aspx</DependentUpon>
+    <Compile Include="Admin_ViewFeedback.aspx.cs">
+      <DependentUpon>Admin_ViewFeedback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_Feedback.aspx.designer.cs">
-      <DependentUpon>Admin_Feedback.aspx</DependentUpon>
+    <Compile Include="Admin_ViewFeedback.aspx.designer.cs">
+      <DependentUpon>Admin_ViewFeedback.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Main_Page.aspx.cs">
-      <DependentUpon>Admin_Main_Page.aspx</DependentUpon>
+    <Compile Include="Admin_viewing.aspx.cs">
+      <DependentUpon>Admin_viewing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_Main_Page.aspx.designer.cs">
-      <DependentUpon>Admin_Main_Page.aspx</DependentUpon>
+    <Compile Include="Admin_viewing.aspx.designer.cs">
+      <DependentUpon>Admin_viewing.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Rating.aspx.cs">
-      <DependentUpon>Admin_Rating.aspx</DependentUpon>
+    <Compile Include="Admin_ViewRating.aspx.cs">
+      <DependentUpon>Admin_ViewRating.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_Rating.aspx.designer.cs">
-      <DependentUpon>Admin_Rating.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_RatingValue.aspx.cs">
-      <DependentUpon>Admin_RatingValue.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin_RatingValue.aspx.designer.cs">
-      <DependentUpon>Admin_RatingValue.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_Users.aspx.cs">
-      <DependentUpon>Admin_Users.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin_Users.aspx.designer.cs">
-      <DependentUpon>Admin_Users.aspx</DependentUpon>
+    <Compile Include="Admin_ViewRating.aspx.designer.cs">
+      <DependentUpon>Admin_ViewRating.aspx</DependentUpon>
     </Compile>
     <Compile Include="BlogLoader.aspx.cs">
       <DependentUpon>BlogLoader.aspx</DependentUpon>
@@ -217,6 +199,13 @@
     <Compile Include="BlogPage.aspx.designer.cs">
       <DependentUpon>BlogPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CommentPostMapper.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -224,13 +213,6 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CuisineForm.aspx.cs">
-      <DependentUpon>CuisineForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CuisineForm.aspx.designer.cs">
-      <DependentUpon>CuisineForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBInteraction.designer.cs">
       <AutoGen>True</AutoGen>
@@ -260,13 +242,6 @@
       <DependentUpon>MyProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="PostCuisineMapper.cs" />
-    <Compile Include="PostsForm.aspx.cs">
-      <DependentUpon>PostsForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PostsForm.aspx.designer.cs">
-      <DependentUpon>PostsForm.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PostTagMapper.cs" />
     <Compile Include="PostUserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -277,22 +252,16 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RatingForm.aspx.cs">
-      <DependentUpon>RatingForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RatingForm.aspx.designer.cs">
-      <DependentUpon>RatingForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RatingValueForm.aspx.cs">
-      <DependentUpon>RatingValueForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RatingValueForm.aspx.designer.cs">
-      <DependentUpon>RatingValueForm.aspx</DependentUpon>
-    </Compile>
     <Compile Include="RatingPostMapper.cs" />
     <Compile Include="RatingRatingValueMapper.cs" />
+    <Compile Include="RegisterUser.aspx.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterUser.aspx.designer.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement.cs" />
     <Compile Include="UserType.cs" />
     <Compile Include="UserUserTypeMapper.cs" />
     <Compile Include="WebForm1.aspx.cs">
