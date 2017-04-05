@@ -21,6 +21,7 @@
       <Column Name="feedbackname" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
       <Column Name="feedbackemail" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
       <Column Name="feedbackmessage" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="feedbacksubject" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Newsletter" Member="Newsletters">
@@ -80,13 +81,6 @@
       <Association Name="Tag_PostsTagMapper" Member="PostsTagMappers" ThisKey="tagsid" OtherKey="tagsid" Type="PostsTagMapper" />
     </Type>
   </Table>
-  <Table Name="dbo.Usertype" Member="Usertypes">
-    <Type Name="Usertype">
-      <Column Name="usertypeid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="uservalues" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-      <Association Name="Usertype_User" Member="Users" ThisKey="usertypeid" OtherKey="usertypeid" Type="User" />
-    </Type>
-  </Table>
   <Table Name="dbo.Users" Member="Users">
     <Type Name="User">
       <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -97,11 +91,10 @@
       <Column Name="username" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
       <Column Name="pass" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="subscribed" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="img" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
       <Column Name="usertypeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="gender" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
       <Association Name="User_Post" Member="Posts" ThisKey="userid" OtherKey="userid" Type="Post" />
-      <Association Name="Usertype_User" Member="Usertype" ThisKey="usertypeid" OtherKey="usertypeid" Type="Usertype" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

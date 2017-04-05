@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_ViewFeedback.aspx.cs" Inherits="WTProject.Admin_ViewFeedback" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Feedback.aspx.cs" Inherits="WTProject.Admin_ViewFeedback" %>
 
 <!DOCTYPE html>
 
@@ -15,10 +15,11 @@
                 <asp:BoundField DataField="feedbackname" HeaderText="feedbackname" SortExpression="feedbackname" />
                 <asp:BoundField DataField="feedbackemail" HeaderText="feedbackemail" SortExpression="feedbackemail" />
                 <asp:BoundField DataField="feedbackmessage" HeaderText="feedbackmessage" SortExpression="feedbackmessage" />
+                <asp:ButtonField CommandName="Delete" HeaderText="Delete" ShowHeader="True" Text="Delete" />
             </Columns>
         </asp:GridView>
-    
-        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" TableName="Feedbacks">
+        <asp:Button ID="FeedbackButton" runat="server" Text="Add" PostBackUrl="~/Contact.aspx"/>
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" TableName="Feedbacks" EnableDelete="True">
         </asp:LinqDataSource>
     
     </div>

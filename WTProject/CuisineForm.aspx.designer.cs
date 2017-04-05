@@ -10,43 +10,52 @@
 namespace WTProject {
     
     
-    public partial class Contact {
+    public partial class CuisineForm {
         
         /// <summary>
-        /// NameTextBox control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText NameTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// EmailTextBox control.
+        /// CuisineLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl EmailTextBox;
+        protected global::System.Web.UI.WebControls.Label CuisineLabel;
         
         /// <summary>
-        /// SubjectTextBox control.
+        /// CuisineNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText SubjectTextBox;
+        protected global::System.Web.UI.WebControls.TextBox CuisineNameTextBox;
         
         /// <summary>
-        /// MessageTextArea control.
+        /// RequiredFieldValidatorTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea MessageTextArea;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTitle;
+        
+        /// <summary>
+        /// RegularExpressionValidatorTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorTitle;
         
         /// <summary>
         /// SubmitButton control.
@@ -55,6 +64,6 @@ namespace WTProject {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton SubmitButton;
+        protected global::System.Web.UI.WebControls.Button SubmitButton;
     }
 }
