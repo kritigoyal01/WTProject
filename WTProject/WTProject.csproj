@@ -96,6 +96,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin_Comments.aspx" />
+    <Content Include="Admin_Cuisine.aspx" />
+    <Content Include="Admin_Feedback.aspx" />
+    <Content Include="Admin_Main_Page.aspx" />
+    <Content Include="Admin_Posts.aspx" />
+    <Content Include="Admin_Rating.aspx" />
+    <Content Include="Admin_RatingValue.aspx" />
+    <Content Include="Admin_Users.aspx" />
     <Content Include="Admin_ViewAllPosts.aspx" />
     <Content Include="Admin_ViewComments.aspx" />
     <Content Include="Admin_ViewCuisine.aspx" />
@@ -106,6 +114,7 @@
     <Content Include="BlogPage.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="CuisineForm.aspx" />
     <Content Include="Faq.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyProfile.aspx" />
@@ -118,6 +127,9 @@
       <LastGenOutput>DBInteraction.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="PostsForm.aspx" />
+    <Content Include="RatingForm.aspx" />
+    <Content Include="RatingValueForm.aspx" />
     <Content Include="RegisterUser.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -142,6 +154,62 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Comments.aspx.cs">
+      <DependentUpon>Admin_Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Comments.aspx.designer.cs">
+      <DependentUpon>Admin_Comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Cuisine.aspx.cs">
+      <DependentUpon>Admin_Cuisine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Cuisine.aspx.designer.cs">
+      <DependentUpon>Admin_Cuisine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Feedback.aspx.cs">
+      <DependentUpon>Admin_Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Feedback.aspx.designer.cs">
+      <DependentUpon>Admin_Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Main_Page.aspx.cs">
+      <DependentUpon>Admin_Main_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Main_Page.aspx.designer.cs">
+      <DependentUpon>Admin_Main_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Posts.aspx.cs">
+      <DependentUpon>Admin_Posts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Posts.aspx.designer.cs">
+      <DependentUpon>Admin_Posts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Rating.aspx.cs">
+      <DependentUpon>Admin_Rating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Rating.aspx.designer.cs">
+      <DependentUpon>Admin_Rating.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_RatingValue.aspx.cs">
+      <DependentUpon>Admin_RatingValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_RatingValue.aspx.designer.cs">
+      <DependentUpon>Admin_RatingValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Users.aspx.cs">
+      <DependentUpon>Admin_Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Users.aspx.designer.cs">
+      <DependentUpon>Admin_Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_ViewAllPosts.aspx.cs">
       <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
@@ -208,6 +276,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CuisineForm.aspx.cs">
+      <DependentUpon>CuisineForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuisineForm.aspx.designer.cs">
+      <DependentUpon>CuisineForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DBInteraction.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -236,6 +311,13 @@
       <DependentUpon>MyProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="PostCuisineMapper.cs" />
+    <Compile Include="PostsForm.aspx.cs">
+      <DependentUpon>PostsForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostsForm.aspx.designer.cs">
+      <DependentUpon>PostsForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PostTagMapper.cs" />
     <Compile Include="PostUserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -246,8 +328,22 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RatingForm.aspx.cs">
+      <DependentUpon>RatingForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RatingForm.aspx.designer.cs">
+      <DependentUpon>RatingForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RatingPostMapper.cs" />
     <Compile Include="RatingRatingValueMapper.cs" />
+    <Compile Include="RatingValueForm.aspx.cs">
+      <DependentUpon>RatingValueForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RatingValueForm.aspx.designer.cs">
+      <DependentUpon>RatingValueForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterUser.aspx.cs">
       <DependentUpon>RegisterUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
