@@ -164,19 +164,19 @@
                                     
                                     <div class="form-group">
                                     	<label class="form-label">Name</label>
-                                        <input type="text" name="username" value="" placeholder="Enter Your Name">
+                                        <input id="NameTextBox" type="text" name="username" placeholder="Enter Your Name" runat="server">
                                     </div>
                                     
                                     <div class="form-group">
                                     	<label class="form-label">Email</label>
-                                        <input type="email" name="email" value="" placeholder="Enter Your Email Address">
+                                        <input id="EmailTextBox" type="email" name="email"  placeholder="Enter Your Email Address" runat="server"/>
                                     </div>
                                     
                                     <div class="clearfix"></div>
                                     
                                     <div class="form-group">
                                     	<label class="form-label">Subject</label>
-                                        <input type="text" name="subject" value="" placeholder="Enter a Subject">
+                                        <input id="SubjectTextBox" type="text" name="subject" placeholder="Enter a Subject" runat="server"/>
                                     </div>
                                     
                                 </div>
@@ -185,7 +185,7 @@
                                     
                                     <div class="form-group">
                                     	<label class="form-label">Message</label>
-                                        <textarea name="message" placeholder="Type Your Message Here"></textarea>
+                                        <textarea name="message" id="MessageTextArea" placeholder="Type Your Message Here" runat="server"></textarea>
                                     </div>
                                     
                                 </div>
@@ -193,7 +193,7 @@
                             </div>
                             
                             <div class="form-group text-right">
-                                <button type="submit" name="submit-form" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-envelope"></span> Send Message</button>
+                                <button id="SubmitButton" type="submit" name="submit-form" class="theme-btn btn-style-one hvr-bounce-to-right" onclick="SubmitButton_Click" runat="server"><span class="fa fa-envelope"></span> Send Message</button>
                             </div>
                             
                         </form>

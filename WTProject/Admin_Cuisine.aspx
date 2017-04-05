@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_ViewCuisine.aspx.cs" Inherits="WTProject.Admin_ViewByCategory" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Cuisine.aspx.cs" Inherits="WTProject.Admin_ViewByCategory" %>
 
 <!DOCTYPE html>
 
@@ -13,9 +13,11 @@
             <Columns>
                 <asp:BoundField DataField="cuisineid" HeaderText="cuisineid" InsertVisible="False" ReadOnly="True" SortExpression="cuisineid" />
                 <asp:BoundField DataField="cuisinename" HeaderText="cuisinename" SortExpression="cuisinename" />
+                <asp:ButtonField CommandName="Delete" HeaderText="Delete" ShowHeader="True" Text="Delete" />
             </Columns>
         </asp:GridView>
-        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" TableName="Cuisines">
+        <asp:Button ID="CuisineAddButton" runat="server" Text="Add" PostBackUrl="~/CuisineForm.aspx" />
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" TableName="Cuisines" EnableDelete="True">
         </asp:LinqDataSource>
     </div>
     </form>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_ViewAllPosts.aspx.cs" Inherits="WTProject.Admin_ViewAllPosts" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Posts.aspx.cs" Inherits="WTProject.Admin_ViewAllPosts" %>
 
 <!DOCTYPE html>
 
@@ -17,10 +17,11 @@
                 <asp:BoundField DataField="userid" HeaderText="userid" SortExpression="userid" />
                 <asp:BoundField DataField="writtencontent" HeaderText="writtencontent" SortExpression="writtencontent" />
                 <asp:BoundField DataField="headerimage" HeaderText="headerimage" SortExpression="headerimage" />
+                <asp:ButtonField CommandName="Delete" HeaderText="Delete" ShowHeader="True" Text="Delete" />
             </Columns>
         </asp:GridView>
-    
-        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" TableName="Posts">
+        <asp:Button ID="Button1" runat="server" Text="Add" PostBackUrl="~/PostsForm.aspx" />
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" TableName="Posts" EnableDelete="True">
         </asp:LinqDataSource>
     
     </div>
