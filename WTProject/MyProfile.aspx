@@ -55,7 +55,7 @@
                             </a>
                         </li>
 
-                        <li class="current"><a href="MyProfile.aspx">My Profile</a>                            
+                        <li class="current"><a href="MyMyProfile.aspx">My Profile</a>                            
                         </li>
                         <%--<li class="dropdown"><a href="sponsors.html">Sponsors</a>
                             <ul class="submenu">
@@ -92,27 +92,48 @@
             <div class="row">
                 <!-- Blog Left Side Begins -->
                 <div class="col-md-12">
-                    <br><br>
+                    
                     <div class="single-sponsors content">
-                        <div class="row">
+                        <div class="row form-group">
+                            <form id="imageform" runat="server">
                             <div class="col-lg-3 sponsors-image">
-                                <img src="images/sponsors/1.png" alt="">
+                                <asp:Image ID="Image1" runat="server" CssClass="img-rounded img-responsive" />   
+                               
+                                <small class="form-text text-muted">Change your picture</small>
+                                <asp:FileUpload onchange="CheckSubmit()" ID="FileUpload1"  runat="server" CssClass="form-control"/>
                             </div>
                             <div class="col-lg-6">
-                                <h2>Sponsors One</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil facilis saepe nam sequi, numquam, nisi! Reprehenderit quisquam ex esse facilis dolor est, quas earum ea, sunt, cupiditate vitae, cumque soluta ab quibusdam.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil facilis saepe nam sequi, numquam, nisi! Reprehenderit quisquam ex esse facilis dolor est, quas earum ea, sunt, cupiditate vitae, cumque soluta ab quibusdam.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil facilis saepe nam sequi, numquam, nisi! Reprehenderit quisquam ex esse facilis dolor est, quas earum ea, sunt, cupiditate vitae, cumque soluta ab quibusdam.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil facilis saepe nam sequi, numquam, nisi! Reprehenderit quisquam ex esse facilis dolor est, quas earum ea, sunt, cupiditate vitae, cumque soluta ab quibusdam.</p>
+                                <small id="emailHelp" class="form-text text-muted">To change your details, just re-enter them and press Enter.</small>
+                                
+                                <h2 id ="name" runat="server"></h2>
+                                <label>Full Name</label><asp:TextBox ID="TextBox1" runat="server" CssClass ="form-control"></asp:TextBox>
+             
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Field cannot be left blank." ForeColor="#FF3300"></asp:RequiredFieldValidator>
+             
+                                <br />
+                                <label>Phone</label><asp:TextBox ID="TextBox2" TextMode="Phone" runat="server" CssClass ="form-control"></asp:TextBox>
+                                <br />
+                                <label>Email ID</label><asp:TextBox ID="TextBox3" TextMode="Email" runat="server" CssClass ="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox3" ErrorMessage="Field cannot be left blank." ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                                <br />
+                                <label>Username</label><asp:TextBox ID="TextBox4" runat="server" CssClass ="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox4" ErrorMessage="Field cannot be left blank." ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                                <br />
+                                <label>Gender</label><asp:DropDownList ID="DropDownList1" runat="server" CssClass ="form-control">
+                                        <asp:ListItem Value="M">Male</asp:ListItem>
+                                        <asp:ListItem Value="F">Female</asp:ListItem>
+                                    </asp:DropDownList>
+                                
                             </div>
+                            </form>
                             <div class="col-lg-3">
                                 <p>
-                                    <label>Type:</label> <br>
-                                    Platinum Sponsor
+                                    <label><a href="ChangePassword.aspx">Change Your Password</a></label>
+                                  
                                 </p>
                                 <p>
-                                    <label>Website:</label> <br>
-                                    <a href="#">www.website.com</a>
+                                    <label></label>
+                                    
                                 </p>
                                 <p>
                                     <label>Twitter:</label> <br>
@@ -282,7 +303,15 @@
   ga('send', 'pageview');
 
 </script>
-
+<script>
+    function CheckSubmit()
+    {
+        if($("#FileUpload1").value != '')
+        {
+            $("#imageform").submit();
+        }
+    }
+</script>
 </body>
 
 <!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/single-sponsors.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 06:00:30 GMT -->

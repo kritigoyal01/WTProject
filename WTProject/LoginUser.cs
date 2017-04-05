@@ -7,6 +7,11 @@ namespace WTProject
 {
     public class LoginUser
     {
+        User u;
+        public LoginUser(User u)
+        {
+            this.u = u;
+        }
         public static IEnumerable<User> login(string name, string pass)
         {
             DBInteractiobDataContext dc = new DBInteractiobDataContext();
@@ -16,6 +21,11 @@ namespace WTProject
                      select n;
 
             return u;
+        }
+        public Boolean ChangePassword()
+        {
+            //Add Some logic for password change
+            return false;
         }
     }
 }

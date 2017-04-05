@@ -55,7 +55,7 @@
                             </a>
                         </li>
 
-                        <li><a href="Profile.aspx">My Profile</a>                            
+                        <li><a href="MyProfile.aspx">My Profile</a>                            
                         </li>
                         <%--<li class="dropdown"><a href="sponsors.html">Sponsors</a>
                             <ul class="submenu">
