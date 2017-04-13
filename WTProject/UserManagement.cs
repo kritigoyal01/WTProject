@@ -13,7 +13,7 @@ namespace WTProject
             this.u = u;
         }
 
-        public Boolean addUser()
+        public bool addUser()
         {
             DBInteractiobDataContext dc = new DBInteractiobDataContext();
             dc.Users.InsertOnSubmit(u);

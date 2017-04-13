@@ -11,6 +11,7 @@ namespace WTProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Write(Request.UrlReferrer.ToString());
         }
 
         private bool SiteSpecificAuthenticationMethod(string UserName, string Password)

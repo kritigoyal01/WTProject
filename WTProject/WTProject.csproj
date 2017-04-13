@@ -104,12 +104,6 @@
     <Content Include="Admin_Rating.aspx" />
     <Content Include="Admin_RatingValue.aspx" />
     <Content Include="Admin_Users.aspx" />
-    <Content Include="Admin_ViewAllPosts.aspx" />
-    <Content Include="Admin_ViewComments.aspx" />
-    <Content Include="Admin_ViewCuisine.aspx" />
-    <Content Include="Admin_ViewFeedback.aspx" />
-    <Content Include="Admin_viewing.aspx" />
-    <Content Include="Admin_ViewRating.aspx" />
     <Content Include="BlogLoader.aspx" />
     <Content Include="BlogPage.aspx" />
     <Content Include="ChangePassword.aspx" />
@@ -131,8 +125,6 @@
     <Content Include="RatingForm.aspx" />
     <Content Include="RatingValueForm.aspx" />
     <Content Include="RegisterUser.aspx" />
-    <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
     <None Include="DBInteraction.dbml.layout">
       <DependentUpon>DBInteraction.dbml</DependentUpon>
     </None>
@@ -210,42 +202,6 @@
     </Compile>
     <Compile Include="Admin_Users.aspx.designer.cs">
       <DependentUpon>Admin_Users.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewAllPosts.aspx.cs">
-      <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewAllPosts.aspx.designer.cs">
-      <DependentUpon>Admin_ViewAllPosts.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewComments.aspx.cs">
-      <DependentUpon>Admin_ViewComments.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewComments.aspx.designer.cs">
-      <DependentUpon>Admin_ViewComments.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewCuisine.aspx.cs">
-      <DependentUpon>Admin_ViewCuisine.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewCuisine.aspx.designer.cs">
-      <DependentUpon>Admin_ViewCuisine.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewFeedback.aspx.cs">
-      <DependentUpon>Admin_ViewFeedback.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewFeedback.aspx.designer.cs">
-      <DependentUpon>Admin_ViewFeedback.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_viewing.aspx.cs">
-      <DependentUpon>Admin_viewing.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_viewing.aspx.designer.cs">
-      <DependentUpon>Admin_viewing.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewRating.aspx.cs">
-      <DependentUpon>Admin_ViewRating.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_ViewRating.aspx.designer.cs">
-      <DependentUpon>Admin_ViewRating.aspx</DependentUpon>
     </Compile>
     <Compile Include="BlogLoader.aspx.cs">
       <DependentUpon>BlogLoader.aspx</DependentUpon>
@@ -354,20 +310,6 @@
     <Compile Include="UserManagement.cs" />
     <Compile Include="UserType.cs" />
     <Compile Include="UserUserTypeMapper.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
