@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Feedback.aspx.cs" Inherits="WTProject.Admin_ViewFeedback" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Feedback.aspx.cs" Inherits="WTProject.Admin_Feedback" %>
 
 <!DOCTYPE html>
 

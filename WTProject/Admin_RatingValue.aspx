@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_RatingValue.aspx.cs" Inherits="WTProject.Admin_ViewRating" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_RatingValue.aspx.cs" Inherits="WTProject.Admin_RatingValue" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +18,7 @@
         </asp:GridView>
         <asp:LinqDataSource ID="LinqDataSourceRatingValue" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EnableDelete="True" EntityTypeName="" TableName="RatingValues">
         </asp:LinqDataSource>
-        <asp:Button ID="Button1" runat="server" Text="Add" PostBackUrl="~/RatingForm.aspx" />
+        <asp:Button ID="Button1" runat="server" Text="Add" PostBackUrl="~/RatingValueForm.aspx" />
     </div>
     </form>
 </body>

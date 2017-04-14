@@ -10,7 +10,7 @@
 namespace WTProject {
     
     
-    public partial class Admin_viewing {
+    public partial class Admin_Main_Page {
         
         /// <summary>
         /// form1 control.
