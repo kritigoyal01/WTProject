@@ -15,37 +15,43 @@ namespace WTProject
         protected void Page_Load(object sender, EventArgs e)
         {
 
+     var value = Request.QueryString["title"].ToString();
+                
+
+       
+       
 
          
-             DBInteractiobDataContext dc = new DBInteractiobDataContext();
+            DBInteractiobDataContext dc = new DBInteractiobDataContext();
             var posts = from a in dc.Posts
+                        where a.posttitle==value
                         select a;
 
-            List<Post> li = new List<Post>();
-            
+      foreach(var v in posts)
+{
+                    lb1.Text = v.posttitle;
+                    lb2.Text = v.writtencontent;
+                    lb3.ImageUrl=v.headerimage;
+var postsid=v.postsid;
+var userid=v.userid;
 
-            foreach(var post in posts)
-            {
-                Post x= new Post();
-                 x.posttitle=post.posttitle;
-                 x.writtencontent=post.writtencontent;
-                 x.headerimage=post.headerimage;
-                 x.postsid=post.postsid;
-                 
-                 li.Add(x);
-            
-            }
+ }                  
+       
+//comment count
+
+Comment comm= new Comment();
+var nmbr= from c in dc.Comments
+           select c;
+
+var counts= nmbr.Count();
+
+total.Text=counts+"Comments";
 
 
 
-            for(int val=0; val<li.Count;val++)
-            
-            {
-                    lb1.Text = li[0].posttitle;
-                    lb2.Text = li[0].writtencontent;
-                    lb3.ImageUrl=li[0].headerimage;
-                   
-            }
+
+
+     
 
         }
 
@@ -55,13 +61,22 @@ namespace WTProject
        protected void SubmitOnClick(object sender, EventArgs e)
         {
 
+
+     var value = Request.QueryString["title"].ToString();
+                
+
+
             
 
             DBInteractiobDataContext dc = new DBInteractiobDataContext();
             Comment comm = new Comment();
+
+            var pid = from p in dc.Posts
+                      where p.posttitle==value
+                      select p.postsid;
            
             comm.comments=message.Text;
-            //comm.postsid=var;
+            comm.postsid=pid.First();
               
           
              dc.Comments.InsertOnSubmit(comm);

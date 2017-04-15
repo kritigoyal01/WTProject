@@ -11,6 +11,9 @@ namespace WTProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+if(!Page.IsPostBack){
             DBInteractiobDataContext dc = new DBInteractiobDataContext();
             var posts = from a in dc.Posts
                         select a;
@@ -36,20 +39,24 @@ namespace WTProject
             for(int val=0; val<li.Count;val++)
 
 
-            {
+            {     
+                        
                    l1b1.Text = li[0].posttitle;
+                    
                     l1b2.Text = li[0].writtencontent;
                     l1b3.ImageUrl=li[0].headerimage;
-
-                    
-                   // Response.Write(li[val].posttitle);
                    
-            }
+                    
+                  
+                   
+     }       }
 
 
         }
 
 
+
+       
 
     }
 }

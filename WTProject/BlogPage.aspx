@@ -137,7 +137,7 @@
                     <!-- Comment Section -->
                     <div class="post-comments">
                         <!-- Heading -->
-                        <div class="title-head wow fadeInUp">3 comments</div>
+                        <div class="title-head wow fadeInUp" > <asp:Label ID="total" runat="server"></asp:Label></div>
                             <ul class="comment-list">
                                 <!-- Item -->
                                 <li class="wow fadeInUp">

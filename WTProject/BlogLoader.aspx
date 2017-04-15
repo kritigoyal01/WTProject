@@ -98,12 +98,12 @@
                 <!-- Blog Left Side Begins -->
                 <div class="col-md-8">
                     <!-- Post -->
-                    <div class="post-item wow" data-animation="fadeInUp" data-animation-delay="300">
+                <div class="post-item wow" data-animation="fadeInUp" data-animation-delay="300">
                         <!-- Post Title -->
-                        <h2 class="wow fadeInUp"><a href="blog-detail.html">We’re expanding</a></h2>
+                       <h2 class="wow fadeInUp"><a href="blog-detail.html">We’re expanding</a></h2>
                         <div class="post wow fadeInUp">
                             <!-- Image -->
-                            <a href="BlogPage.aspx?id="><img class="img-responsive" src="images/blog/1.jpg" alt="blog" /></a>
+                           <a href="BlogPage.aspx?id="><img class="img-responsive" src="images/blog/1.jpg" alt="blog" /></a>
                             <div class="post-content">	
                                 <!-- Text -->
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries. </p>
@@ -118,8 +118,8 @@
                     <div class="post-item wow" data-animation="fadeInUp"  data-animation-delay="300">
                         <!-- Post Title -->
                        
-                        <h2 class="wow fadeInUp"  ><a runat ="server" id="first"  href="BlogPage.aspx"> 
-                            <asp:Label ID="l1b1" runat="server"></asp:Label>
+                        <h2 class="wow fadeInUp"  ><a  href="BlogPage.aspx?title=<%=l1b1.Text%>" >
+                           <asp:Label ID="l1b1" runat="server"></asp:Label>
                                      
                                     </a></h2>
                            
@@ -143,7 +143,7 @@
                     <!-- Post -->
                     <div class="post-item wow" data-animation="fadeInUp" data-animation-delay="300">
                         <!-- Post Title -->
-                        <h2 class="wow fadeInUp"><a href="#"><asp:Label ID="l2b1" runat="server" ></asp:Label></a></h2>
+                        <h2 class="wow fadeInUp"><a href="#">hello<asp:Label ID="l2b1" runat="server" ></asp:Label></a></h2>
                         <div class="post wow fadeInUp">
                             <!-- Image -->
                             <a href="blog-detail.html"><asp:Image id="l2b3" Height="400px" Width="1000px" class="img-responsive" alt="blog" runat="server" /></a>
