@@ -71,22 +71,19 @@ total.Text=counts+"Comments";
             DBInteractiobDataContext dc = new DBInteractiobDataContext();
             Comment comm = new Comment();
 
-            var pid = from p in dc.Posts
-                      where p.posttitle==value
-                      select p.postsid;
+            var p = from pi in dc.Posts
+                      where pi.posttitle==value
+                      select pi;
            
-            comm.comments=message.Text;
-            comm.postsid=pid.First();
-              
-          
-             dc.Comments.InsertOnSubmit(comm);
-           
-            dc.SubmitChanges();
-               
-                
-           
+            Post post = p.First();
 
-            // alert
+            comm.comments=message.Text;
+            comm.postsid=post.postsid;
+            CommentPostMapper cpm = new CommentPostMapper(post, comm);
+            //CALL INSERTION FUNCTION HERE
+           cpm.commentinsertion();
+
+        // alert
             string mess = "Thank you for the comment.";
             string script = "window.onload = function(){ alert('";
             script += mess;
@@ -95,7 +92,6 @@ total.Text=counts+"Comments";
             script += Request.Url.AbsoluteUri;
             script += "'; }";
             ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
-           
 
         }
 

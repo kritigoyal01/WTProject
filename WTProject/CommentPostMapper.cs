@@ -9,6 +9,26 @@ namespace WTProject
     {
         Comment c;
         Post p;
+        
+        public CommentPostMapper(Post p, Comment c)
+        {
+            this.c = c;
+            this.p = p;  
+        }
 
+        public void commentinsertion()
+        {
+    
+            DBInteractiobDataContext dc = new DBInteractiobDataContext();
+
+             dc.Comments.InsertOnSubmit(c);
+           
+            dc.SubmitChanges();
+
+
+
+
+                   
+           }
     }
 }
