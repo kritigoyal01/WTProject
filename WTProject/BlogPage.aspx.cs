@@ -52,33 +52,23 @@ var counts= nmbr.Count();
 total.Text=counts+"Comments";
 
 //comment display
-/*
-var comment= from c in dc.Comments
-             select c;
 
-foreach(var com in comment)
+
+var comment= from c in dc.Comments
+         join u in dc.Users on c.user_id equals u.userid
+         select new{u.name, u.img,c.comments,c.date_added};
+
+foreach(var co in comment)
 {
 
+Response.Write(co.name+co.comments+co.date_added+co.img);
+                        
+           
 
-                           <ul class="comment-list"><li class="wow fadeInUp"><img src="images/blog/comments/1.jpg" alt="" /><div class="comment-details"><div class="comments"><div class="comment-meta">{com.message}<div class="user-name">Jenna
-                                                </div>
-                                                <div class="posted-date">
-                                                    July 19, 2014  <span> 5:50 AM</span>
-                                                </div>
-                                            </div>
-                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.	</p>
-                                        </div>
-                                        <a href="#" class="btn reply">reply</a>
-                                    </div>
-                                </li>
-
-
-     
-
-  */ 
+  
 
         }
-
+}
 
 
 
