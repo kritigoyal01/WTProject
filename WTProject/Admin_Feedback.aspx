@@ -14,8 +14,10 @@
                 <asp:BoundField DataField="feedbackid" HeaderText="feedbackid" ReadOnly="True" SortExpression="feedbackid" />
                 <asp:BoundField DataField="feedbackname" HeaderText="feedbackname" SortExpression="feedbackname" />
                 <asp:BoundField DataField="feedbackemail" HeaderText="feedbackemail" SortExpression="feedbackemail" />
+                <asp:BoundField DataField="feedbacksubject" HeaderText="feedbacksubject" ReadOnly="True" SortExpression="feedbacksubject" />
                 <asp:BoundField DataField="feedbackmessage" HeaderText="feedbackmessage" SortExpression="feedbackmessage" />
                 <asp:ButtonField CommandName="Delete" HeaderText="Delete" ShowHeader="True" Text="Delete" />
+             
             </Columns>
         </asp:GridView>
         <asp:Button ID="FeedbackButton" runat="server" Text="Add" PostBackUrl="~/Contact.aspx"/>

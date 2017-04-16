@@ -30,6 +30,9 @@ namespace WTProject
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertComment(Comment instance);
+    partial void UpdateComment(Comment instance);
+    partial void DeleteComment(Comment instance);
     partial void InsertCuisine(Cuisine instance);
     partial void UpdateCuisine(Cuisine instance);
     partial void DeleteCuisine(Cuisine instance);
@@ -39,9 +42,6 @@ namespace WTProject
     partial void InsertNewsletter(Newsletter instance);
     partial void UpdateNewsletter(Newsletter instance);
     partial void DeleteNewsletter(Newsletter instance);
-    partial void InsertComment(Comment instance);
-    partial void UpdateComment(Comment instance);
-    partial void DeleteComment(Comment instance);
     partial void InsertPost(Post instance);
     partial void UpdatePost(Post instance);
     partial void DeletePost(Post instance);
@@ -95,6 +95,14 @@ namespace WTProject
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<Comment> Comments
+		{
+			get
+			{
+				return this.GetTable<Comment>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Cuisine> Cuisines
 		{
 			get
@@ -116,14 +124,6 @@ namespace WTProject
 			get
 			{
 				return this.GetTable<Newsletter>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Comment> Comments
-		{
-			get
-			{
-				return this.GetTable<Comment>();
 			}
 		}
 		
@@ -180,6 +180,205 @@ namespace WTProject
 			get
 			{
 				return this.GetTable<Usertype>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Comments")]
+	public partial class Comment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _commentsid;
+		
+		private string _comments;
+		
+		private System.Nullable<int> _postsid;
+		
+		private System.Nullable<int> _user_id;
+		
+		private System.Nullable<System.DateTime> _date_added;
+		
+		private EntityRef<User> _User;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OncommentsidChanging(int value);
+    partial void OncommentsidChanged();
+    partial void OncommentsChanging(string value);
+    partial void OncommentsChanged();
+    partial void OnpostsidChanging(System.Nullable<int> value);
+    partial void OnpostsidChanged();
+    partial void Onuser_idChanging(System.Nullable<int> value);
+    partial void Onuser_idChanged();
+    partial void Ondate_addedChanging(System.Nullable<System.DateTime> value);
+    partial void Ondate_addedChanged();
+    #endregion
+		
+		public Comment()
+		{
+			this._User = default(EntityRef<User>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_commentsid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int commentsid
+		{
+			get
+			{
+				return this._commentsid;
+			}
+			set
+			{
+				if ((this._commentsid != value))
+				{
+					this.OncommentsidChanging(value);
+					this.SendPropertyChanging();
+					this._commentsid = value;
+					this.SendPropertyChanged("commentsid");
+					this.OncommentsidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_comments", DbType="VarChar(225)")]
+		public string comments
+		{
+			get
+			{
+				return this._comments;
+			}
+			set
+			{
+				if ((this._comments != value))
+				{
+					this.OncommentsChanging(value);
+					this.SendPropertyChanging();
+					this._comments = value;
+					this.SendPropertyChanged("comments");
+					this.OncommentsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_postsid", DbType="Int")]
+		public System.Nullable<int> postsid
+		{
+			get
+			{
+				return this._postsid;
+			}
+			set
+			{
+				if ((this._postsid != value))
+				{
+					this.OnpostsidChanging(value);
+					this.SendPropertyChanging();
+					this._postsid = value;
+					this.SendPropertyChanged("postsid");
+					this.OnpostsidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", DbType="Int")]
+		public System.Nullable<int> user_id
+		{
+			get
+			{
+				return this._user_id;
+			}
+			set
+			{
+				if ((this._user_id != value))
+				{
+					if (this._User.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onuser_idChanging(value);
+					this.SendPropertyChanging();
+					this._user_id = value;
+					this.SendPropertyChanged("user_id");
+					this.Onuser_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_added", DbType="DateTime")]
+		public System.Nullable<System.DateTime> date_added
+		{
+			get
+			{
+				return this._date_added;
+			}
+			set
+			{
+				if ((this._date_added != value))
+				{
+					this.Ondate_addedChanging(value);
+					this.SendPropertyChanging();
+					this._date_added = value;
+					this.SendPropertyChanged("date_added");
+					this.Ondate_addedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Comment", Storage="_User", ThisKey="user_id", OtherKey="userid", IsForeignKey=true)]
+		public User User
+		{
+			get
+			{
+				return this._User.Entity;
+			}
+			set
+			{
+				User previousValue = this._User.Entity;
+				if (((previousValue != value) 
+							|| (this._User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._User.Entity = null;
+						previousValue.Comments.Remove(this);
+					}
+					this._User.Entity = value;
+					if ((value != null))
+					{
+						value.Comments.Add(this);
+						this._user_id = value.userid;
+					}
+					else
+					{
+						this._user_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -312,6 +511,8 @@ namespace WTProject
 		
 		private string _feedbackmessage;
 		
+		private string _feedbacksubject;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -324,6 +525,8 @@ namespace WTProject
     partial void OnfeedbackemailChanged();
     partial void OnfeedbackmessageChanging(string value);
     partial void OnfeedbackmessageChanged();
+    partial void OnfeedbacksubjectChanging(string value);
+    partial void OnfeedbacksubjectChanged();
     #endregion
 		
 		public Feedback()
@@ -407,6 +610,26 @@ namespace WTProject
 					this._feedbackmessage = value;
 					this.SendPropertyChanged("feedbackmessage");
 					this.OnfeedbackmessageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbacksubject", DbType="VarChar(225)")]
+		public string feedbacksubject
+		{
+			get
+			{
+				return this._feedbacksubject;
+			}
+			set
+			{
+				if ((this._feedbacksubject != value))
+				{
+					this.OnfeedbacksubjectChanging(value);
+					this.SendPropertyChanging();
+					this._feedbacksubject = value;
+					this.SendPropertyChanged("feedbacksubject");
+					this.OnfeedbacksubjectChanged();
 				}
 			}
 		}
@@ -589,205 +812,6 @@ namespace WTProject
 					this._footer = value;
 					this.SendPropertyChanged("footer");
 					this.OnfooterChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Comments")]
-	public partial class Comment : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _commentsid;
-		
-		private string _comments;
-		
-		private System.Nullable<int> _postsid;
-		
-		private System.Nullable<int> _user_id;
-		
-		private System.Nullable<System.DateTime> _date_added;
-		
-		private EntityRef<User> _User;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OncommentsidChanging(int value);
-    partial void OncommentsidChanged();
-    partial void OncommentsChanging(string value);
-    partial void OncommentsChanged();
-    partial void OnpostsidChanging(System.Nullable<int> value);
-    partial void OnpostsidChanged();
-    partial void Onuser_idChanging(System.Nullable<int> value);
-    partial void Onuser_idChanged();
-    partial void Ondate_addedChanging(System.Nullable<System.DateTime> value);
-    partial void Ondate_addedChanged();
-    #endregion
-		
-		public Comment()
-		{
-			this._User = default(EntityRef<User>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_commentsid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int commentsid
-		{
-			get
-			{
-				return this._commentsid;
-			}
-			set
-			{
-				if ((this._commentsid != value))
-				{
-					this.OncommentsidChanging(value);
-					this.SendPropertyChanging();
-					this._commentsid = value;
-					this.SendPropertyChanged("commentsid");
-					this.OncommentsidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_comments", DbType="VarChar(225)")]
-		public string comments
-		{
-			get
-			{
-				return this._comments;
-			}
-			set
-			{
-				if ((this._comments != value))
-				{
-					this.OncommentsChanging(value);
-					this.SendPropertyChanging();
-					this._comments = value;
-					this.SendPropertyChanged("comments");
-					this.OncommentsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_postsid", DbType="Int")]
-		public System.Nullable<int> postsid
-		{
-			get
-			{
-				return this._postsid;
-			}
-			set
-			{
-				if ((this._postsid != value))
-				{
-					this.OnpostsidChanging(value);
-					this.SendPropertyChanging();
-					this._postsid = value;
-					this.SendPropertyChanged("postsid");
-					this.OnpostsidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", DbType="Int")]
-		public System.Nullable<int> user_id
-		{
-			get
-			{
-				return this._user_id;
-			}
-			set
-			{
-				if ((this._user_id != value))
-				{
-					if (this._User.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onuser_idChanging(value);
-					this.SendPropertyChanging();
-					this._user_id = value;
-					this.SendPropertyChanged("user_id");
-					this.Onuser_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_added", DbType="DateTime")]
-		public System.Nullable<System.DateTime> date_added
-		{
-			get
-			{
-				return this._date_added;
-			}
-			set
-			{
-				if ((this._date_added != value))
-				{
-					this.Ondate_addedChanging(value);
-					this.SendPropertyChanging();
-					this._date_added = value;
-					this.SendPropertyChanged("date_added");
-					this.Ondate_addedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Comment", Storage="_User", ThisKey="user_id", OtherKey="userid", IsForeignKey=true)]
-		public User User
-		{
-			get
-			{
-				return this._User.Entity;
-			}
-			set
-			{
-				User previousValue = this._User.Entity;
-				if (((previousValue != value) 
-							|| (this._User.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._User.Entity = null;
-						previousValue.Comments.Remove(this);
-					}
-					this._User.Entity = value;
-					if ((value != null))
-					{
-						value.Comments.Add(this);
-						this._user_id = value.userid;
-					}
-					else
-					{
-						this._user_id = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("User");
 				}
 			}
 		}
