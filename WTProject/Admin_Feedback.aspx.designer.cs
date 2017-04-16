@@ -10,7 +10,7 @@
 namespace WTProject {
     
     
-    public partial class Admin_ViewFeedback {
+    public partial class Admin_Feedback {
         
         /// <summary>
         /// form1 control.

@@ -11,7 +11,10 @@ namespace WTProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if(Session["user"] != null)
+            {
+                Response.Redirect("~/MyProfile.aspx");
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -20,7 +23,7 @@ namespace WTProject
             long phone = long.Parse(TextBox2.Text);
             string email = TextBox3.Text;
             string username = TextBox4.Text;
-            int gender = Int32.Parse(DropDownList1.SelectedValue);
+            string gender = DropDownList1.SelectedValue;
             string filename;
 
             if (FileUpload1.HasFile)
@@ -41,10 +44,13 @@ namespace WTProject
             u.username = username;
             u.pass = ConfirmPassword.Text;
             u.img = filename;
+            u.gender = DropDownList1.SelectedValue;
+            u.subscribed = 1;
+            u.usertypeid = 2;
 
             UserManagement ru = new UserManagement(u);
-            Boolean check = ru.addUser();
-            if(check == true)
+            bool check = ru.addUser();
+            if (check == true)
             {
                 Response.Write("<script>alert('Registration successfull.');</script>");
             }
@@ -52,6 +58,7 @@ namespace WTProject
             {
                 Response.Write("<script>alert('Registration unsuccessfull. Try again later.');</script>");
             }
+            Response.Redirect("~/Login.aspx");
         }
     }
 }

@@ -10,7 +10,7 @@
 namespace WTProject {
     
     
-    public partial class Admin_ViewRating {
+    public partial class Admin_RatingValue {
         
         /// <summary>
         /// form1 control.

@@ -1748,8 +1748,6 @@ namespace WTProject
 		
 		private string _name;
 		
-		private System.Nullable<System.DateTime> _dob;
-		
 		private System.Nullable<long> _phone;
 		
 		private string _email;
@@ -1776,8 +1774,6 @@ namespace WTProject
     partial void OnuseridChanged();
     partial void OnnameChanging(string value);
     partial void OnnameChanged();
-    partial void OndobChanging(System.Nullable<System.DateTime> value);
-    partial void OndobChanged();
     partial void OnphoneChanging(System.Nullable<long> value);
     partial void OnphoneChanged();
     partial void OnemailChanging(string value);
@@ -1838,26 +1834,6 @@ namespace WTProject
 					this._name = value;
 					this.SendPropertyChanged("name");
 					this.OnnameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dob", DbType="Date")]
-		public System.Nullable<System.DateTime> dob
-		{
-			get
-			{
-				return this._dob;
-			}
-			set
-			{
-				if ((this._dob != value))
-				{
-					this.OndobChanging(value);
-					this.SendPropertyChanging();
-					this._dob = value;
-					this.SendPropertyChanged("dob");
-					this.OndobChanged();
 				}
 			}
 		}
@@ -1962,7 +1938,7 @@ namespace WTProject
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_img", DbType="VarChar(225)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_img", DbType="VarChar(8000)")]
 		public string img
 		{
 			get

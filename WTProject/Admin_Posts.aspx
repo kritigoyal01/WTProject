@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Posts.aspx.cs" Inherits="WTProject.Admin_ViewAllPosts" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Posts.aspx.cs" Inherits="WTProject.Admin_Posts" %>
 
 <!DOCTYPE html>
 

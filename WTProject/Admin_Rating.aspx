@@ -14,10 +14,11 @@
                 <asp:BoundField DataField="ratingid" HeaderText="ratingid" ReadOnly="True" SortExpression="ratingid" />
                 <asp:BoundField DataField="ratingvalueid" HeaderText="ratingvalueid" ReadOnly="True" SortExpression="ratingvalueid" />
                 <asp:BoundField DataField="postsid" HeaderText="postsid" ReadOnly="True" SortExpression="postsid" />
+                <asp:ButtonField CommandName="Delete" HeaderText="Delete" ShowHeader="True" Text="Delete" />
             </Columns>
         </asp:GridView>
-        <asp:Button ID="SubmitButton" runat="server" Text="Add" PostBackUrl="RatingForm.aspx" />
-        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" Select="new (ratingid, ratingvalueid, postsid)" TableName="Ratings">
+        <asp:Button ID="SubmitButton" runat="server" Text="Add" PostBackUrl="~/RatingForm.aspx" />
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" Select="new (ratingid, ratingvalueid, postsid)" TableName="Ratings" EnableDelete="True">
         </asp:LinqDataSource>
     </div>
     </form>

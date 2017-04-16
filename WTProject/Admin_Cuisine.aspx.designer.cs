@@ -10,7 +10,7 @@
 namespace WTProject {
     
     
-    public partial class Admin_ViewByCategory {
+    public partial class Admin_Cuisine {
         
         /// <summary>
         /// form1 control.

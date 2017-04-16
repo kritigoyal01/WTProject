@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Cuisine.aspx.cs" Inherits="WTProject.Admin_ViewByCategory" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Cuisine.aspx.cs" Inherits="WTProject.Admin_Cuisine" %>
 
 <!DOCTYPE html>
 

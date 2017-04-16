@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Comments.aspx.cs" Inherits="WTProject.Admin_ViewComments" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Comments.aspx.cs" Inherits="WTProject.Admin_Comments" %>
 
 <!DOCTYPE html>
 

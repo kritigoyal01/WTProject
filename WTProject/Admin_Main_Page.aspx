@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Main_Page.aspx.cs" Inherits="WTProject.Admin_viewing" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Main_Page.aspx.cs" Inherits="WTProject.Admin_Main_Page" %>
 
 <!DOCTYPE html>
 
@@ -11,12 +11,13 @@
     <div>
         <asp:Menu ID="Menu1" Style="display:inline" runat="server"  Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick">
             <Items>
-                <asp:MenuItem NavigateUrl="~/Admin_ViewAllPosts.aspx" Selected="True" Text="Posts" Value="ViewAllPosts" ></asp:MenuItem>
-                <asp:MenuItem Text="Cuisine" Value="ViewByCategory" NavigateUrl="~/Admin_ViewCuisine.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="Feedback" Value="ViewFeedback" NavigateUrl="~/Admin_ViewFeedback.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="Comments" Value="ViewComments" NavigateUrl="~/Admin_ViewComments.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="Rating" Value="ViewRating" NavigateUrl="~/Admin_ViewRating.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="Users" Value="ViewUsers"></asp:MenuItem>
+                <asp:MenuItem  Text="Posts" Value="ViewAllPosts"  NavigateUrl="~/Admin_Posts.aspx" Selected="True"></asp:MenuItem>
+                <asp:MenuItem Text="Cuisine" Value="ViewCuisine" NavigateUrl="~/Admin_Cuisine.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Feedback" Value="ViewFeedback" NavigateUrl="~/Admin_Feedback.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Comments" Value="ViewComments" NavigateUrl="~/Admin_Comments.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Rating" Value="ViewRating" NavigateUrl="~/Admin_Rating.aspx"></asp:MenuItem>
+                 <asp:MenuItem Text="RatingValue" Value="ViewRatingValue" NavigateUrl="~/Admin_RatingValue.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Users" Value="ViewUsers" NavigateUrl="~/Admin_Users.aspx"></asp:MenuItem>
             </Items>
         </asp:Menu>
         
