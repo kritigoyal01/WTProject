@@ -13,6 +13,15 @@ namespace WTProject {
     public partial class Contact {
         
         /// <summary>
+        /// contactform control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm contactform;
+        
+        /// <summary>
         /// NameTextBox control.
         /// </summary>
         /// <remarks>
@@ -49,12 +58,12 @@ namespace WTProject {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea MessageTextArea;
         
         /// <summary>
-        /// SubmitButton control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton SubmitButton;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

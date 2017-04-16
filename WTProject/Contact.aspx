@@ -157,7 +157,7 @@
             	<div class="col-md-9 col-sm-12 col-xs-12 contact-form wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 		
                         <!--Contact Form-->
-                        <form id="contact-form" method="post" action="http://wp1.themexlab.com/html/meeton-new-with-files/sendemail.php">
+                        <form id="contactform" runat="server">
                         	<div class="row clearfix">
                                 
                                 <div class="col-md-5 col-sm-6 col-xs-12">
@@ -193,7 +193,7 @@
                             </div>
                             
                             <div class="form-group text-right">
-                                <button id="SubmitButton" type="submit" name="submit-form" class="theme-btn btn-style-one hvr-bounce-to-right" onclick="SubmitButton_Click" runat="server"><span class="fa fa-envelope"></span> Send Message</button>
+                                <asp:Button ID="Button1" CssClass="theme-btn btn-style-one hvr-bounce-to-right" runat="server" Text="Send Feedback" OnClick="Button1_Click1" /><span class="fa fa-envelope"></span>
                             </div>
                             
                         </form>

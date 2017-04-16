@@ -36,9 +36,6 @@ namespace WTProject
     partial void InsertCuisine(Cuisine instance);
     partial void UpdateCuisine(Cuisine instance);
     partial void DeleteCuisine(Cuisine instance);
-    partial void InsertFeedback(Feedback instance);
-    partial void UpdateFeedback(Feedback instance);
-    partial void DeleteFeedback(Feedback instance);
     partial void InsertNewsletter(Newsletter instance);
     partial void UpdateNewsletter(Newsletter instance);
     partial void DeleteNewsletter(Newsletter instance);
@@ -63,6 +60,9 @@ namespace WTProject
     partial void InsertUsertype(Usertype instance);
     partial void UpdateUsertype(Usertype instance);
     partial void DeleteUsertype(Usertype instance);
+    partial void InsertFeedback(Feedback instance);
+    partial void UpdateFeedback(Feedback instance);
+    partial void DeleteFeedback(Feedback instance);
     #endregion
 		
 		public DBInteractiobDataContext() : 
@@ -108,14 +108,6 @@ namespace WTProject
 			get
 			{
 				return this.GetTable<Cuisine>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Feedback> Feedbacks
-		{
-			get
-			{
-				return this.GetTable<Feedback>();
 			}
 		}
 		
@@ -180,6 +172,14 @@ namespace WTProject
 			get
 			{
 				return this.GetTable<Usertype>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Feedback> Feedbacks
+		{
+			get
+			{
+				return this.GetTable<Feedback>();
 			}
 		}
 	}
@@ -494,164 +494,6 @@ namespace WTProject
 		{
 			this.SendPropertyChanging();
 			entity.Cuisine = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Feedback")]
-	public partial class Feedback : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _feedbackid;
-		
-		private string _feedbackname;
-		
-		private string _feedbackemail;
-		
-		private string _feedbackmessage;
-		
-		private string _feedbacksubject;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnfeedbackidChanging(int value);
-    partial void OnfeedbackidChanged();
-    partial void OnfeedbacknameChanging(string value);
-    partial void OnfeedbacknameChanged();
-    partial void OnfeedbackemailChanging(string value);
-    partial void OnfeedbackemailChanged();
-    partial void OnfeedbackmessageChanging(string value);
-    partial void OnfeedbackmessageChanged();
-    partial void OnfeedbacksubjectChanging(string value);
-    partial void OnfeedbacksubjectChanged();
-    #endregion
-		
-		public Feedback()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbackid", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int feedbackid
-		{
-			get
-			{
-				return this._feedbackid;
-			}
-			set
-			{
-				if ((this._feedbackid != value))
-				{
-					this.OnfeedbackidChanging(value);
-					this.SendPropertyChanging();
-					this._feedbackid = value;
-					this.SendPropertyChanged("feedbackid");
-					this.OnfeedbackidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbackname", DbType="VarChar(225)")]
-		public string feedbackname
-		{
-			get
-			{
-				return this._feedbackname;
-			}
-			set
-			{
-				if ((this._feedbackname != value))
-				{
-					this.OnfeedbacknameChanging(value);
-					this.SendPropertyChanging();
-					this._feedbackname = value;
-					this.SendPropertyChanged("feedbackname");
-					this.OnfeedbacknameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbackemail", DbType="VarChar(225)")]
-		public string feedbackemail
-		{
-			get
-			{
-				return this._feedbackemail;
-			}
-			set
-			{
-				if ((this._feedbackemail != value))
-				{
-					this.OnfeedbackemailChanging(value);
-					this.SendPropertyChanging();
-					this._feedbackemail = value;
-					this.SendPropertyChanged("feedbackemail");
-					this.OnfeedbackemailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbackmessage", DbType="VarChar(225)")]
-		public string feedbackmessage
-		{
-			get
-			{
-				return this._feedbackmessage;
-			}
-			set
-			{
-				if ((this._feedbackmessage != value))
-				{
-					this.OnfeedbackmessageChanging(value);
-					this.SendPropertyChanging();
-					this._feedbackmessage = value;
-					this.SendPropertyChanged("feedbackmessage");
-					this.OnfeedbackmessageChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbacksubject", DbType="VarChar(225)")]
-		public string feedbacksubject
-		{
-			get
-			{
-				return this._feedbacksubject;
-			}
-			set
-			{
-				if ((this._feedbacksubject != value))
-				{
-					this.OnfeedbacksubjectChanging(value);
-					this.SendPropertyChanging();
-					this._feedbacksubject = value;
-					this.SendPropertyChanged("feedbacksubject");
-					this.OnfeedbacksubjectChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -2255,6 +2097,164 @@ namespace WTProject
 		{
 			this.SendPropertyChanging();
 			entity.Usertype = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Feedback")]
+	public partial class Feedback : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _feedbackid;
+		
+		private string _feedbackname;
+		
+		private string _feedbackemail;
+		
+		private string _feedbackmessage;
+		
+		private string _feedbacksubject;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnfeedbackidChanging(int value);
+    partial void OnfeedbackidChanged();
+    partial void OnfeedbacknameChanging(string value);
+    partial void OnfeedbacknameChanged();
+    partial void OnfeedbackemailChanging(string value);
+    partial void OnfeedbackemailChanged();
+    partial void OnfeedbackmessageChanging(string value);
+    partial void OnfeedbackmessageChanged();
+    partial void OnfeedbacksubjectChanging(string value);
+    partial void OnfeedbacksubjectChanged();
+    #endregion
+		
+		public Feedback()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbackid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int feedbackid
+		{
+			get
+			{
+				return this._feedbackid;
+			}
+			set
+			{
+				if ((this._feedbackid != value))
+				{
+					this.OnfeedbackidChanging(value);
+					this.SendPropertyChanging();
+					this._feedbackid = value;
+					this.SendPropertyChanged("feedbackid");
+					this.OnfeedbackidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbackname", DbType="VarChar(225)")]
+		public string feedbackname
+		{
+			get
+			{
+				return this._feedbackname;
+			}
+			set
+			{
+				if ((this._feedbackname != value))
+				{
+					this.OnfeedbacknameChanging(value);
+					this.SendPropertyChanging();
+					this._feedbackname = value;
+					this.SendPropertyChanged("feedbackname");
+					this.OnfeedbacknameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbackemail", DbType="VarChar(225)")]
+		public string feedbackemail
+		{
+			get
+			{
+				return this._feedbackemail;
+			}
+			set
+			{
+				if ((this._feedbackemail != value))
+				{
+					this.OnfeedbackemailChanging(value);
+					this.SendPropertyChanging();
+					this._feedbackemail = value;
+					this.SendPropertyChanged("feedbackemail");
+					this.OnfeedbackemailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbackmessage", DbType="VarChar(225)")]
+		public string feedbackmessage
+		{
+			get
+			{
+				return this._feedbackmessage;
+			}
+			set
+			{
+				if ((this._feedbackmessage != value))
+				{
+					this.OnfeedbackmessageChanging(value);
+					this.SendPropertyChanging();
+					this._feedbackmessage = value;
+					this.SendPropertyChanged("feedbackmessage");
+					this.OnfeedbackmessageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_feedbacksubject", DbType="VarChar(225)")]
+		public string feedbacksubject
+		{
+			get
+			{
+				return this._feedbacksubject;
+			}
+			set
+			{
+				if ((this._feedbacksubject != value))
+				{
+					this.OnfeedbacksubjectChanging(value);
+					this.SendPropertyChanging();
+					this._feedbacksubject = value;
+					this.SendPropertyChanged("feedbacksubject");
+					this.OnfeedbacksubjectChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }
