@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Cook - A - Roo | Khao aur Khilao | Login</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/revolution-slider.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">

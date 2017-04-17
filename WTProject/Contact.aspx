@@ -8,7 +8,7 @@
 
 <!-- Mirrored from wp1.themexlab.com/html/meeton-new-with-files/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 06:01:06 GMT -->
 <meta charset="utf-8">
-<title>Meeton - Conference & Event HTML5 Template | Contact Us</title>
+<title>Cook - A - Roo | Khao aur Khilao | Contact Us</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/revolution-slider.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     <header class="main-header">
     	<div class="auto-container clearfix">
         	<!--Logo-->
-            <div class="logo"><a href="index.html"><img src="images/logo.jpg" alt="Meeton" title="Meeton"></a></div>
+            <div class="logo"><a href="Default.aspx"><img class="img-wrap img-circle" src="images/pablo.png" height="100px" width="270px" alt="Cook-a-roo" title="Cook-a-roo"></a></div>
             
             <!--Main Menu-->
             <nav class="main-menu">
@@ -46,56 +46,19 @@
                 
                 <div class="navbar-collapse collapse clearfix">                                                                                              
                     <ul class="navigation">
-                        <li class="dropdown"><a href="index.html">Home</a>
-                            <ul class="submenu">
-                                <li><a href="index.html">Home Style One</a></li>
-                                <li><a href="index-2.html">Home Style Two</a></li>
-                                <li><a href="index-3.html">Home Style Three</a></li>
-                            </ul>
+                        <li class="current"><a href="Default.aspx">Home</a>          
                         </li>
-                        <li class="dropdown"><a href="about.html">About</a>
-                            <ul class="submenu">
-                                <li><a href="services.html">Services</a></li>
-                            </ul>
+                        <li><a href="About.aspx">About</a>                            
                         </li>
-                        <li class="dropdown"><a href="#">pages</a>
-                            <ul class="submenu">
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li class="dropdown"><a href="testimonials-v1.html">Testimonials</a>
-                                    <ul class="submenu">
-                                        <li><a href="testimonials-v1.html">Testimonials V1</a></li>
-                                        <li><a href="testimonials-v2.html">Testimonials V2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="gallery-style-one.html">Gallery</a>
-                                    <ul class="submenu">
-                                        <li><a href="gallery-style-one.html">Gallery Style One</a></li>
-                                        <li><a href="gallery-style-two.html">Gallery Style Two</a></li>
-                                        <li><a href="gallery-style-three.html">Gallery Style Three</a></li>
-                                        <li><a href="gallery-style-four.html">Gallery Style Four</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="ticket.html">Ticket</a></li>
-                            </ul>
+                        <li><a href="BlogLoader.aspx">Posts</a></li>
+                            
+                        <li><a href="Faq.aspx">FAQ
+                            </a>
                         </li>
-                        <li class="dropdown"><a href="schedule.html">Schedule</a>
-                            <ul class="submenu">
-                                <li><a href="schedule.html">Schedule Style One</a></li>
-                                <li><a href="schedule-2.html">Schedule Style Two</a></li>
-                                <li><a href="single-event.html">Single Event</a></li>
-                            </ul>
+
+                        <li><a href="MyProfile.aspx">My Profile</a>                            
                         </li>
-                        <li class="dropdown"><a href="speakers.html">Speakers</a>
-                            <ul class="submenu">
-                                <li><a href="speakers.html">Speakers Style One</a></li>
-                                <li><a href="speakers-2-col.html">Speakers Style Two</a></li>
-                                <li><a href="speakers-2-col-styled.html">Speakers Style Three</a></li>
-                                <li><a href="speakers-3-col.html">Speakers Style Four</a></li>
-                                <li><a href="speakers-3-col-styled.html">Speakers Style Five</a></li>
-                                <li><a href="single-speaker.html">Single Speaker</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="sponsors.html">Sponsors</a>
+                        <%--<li class="dropdown"><a href="sponsors.html">Sponsors</a>
                             <ul class="submenu">
                                 <li><a href="single-sponsors.html">Single Sponsors</a></li>
                             </ul>
@@ -108,8 +71,8 @@
                                 <li><a href="blog-left.html">Blog Style Four</a></li>
                                 <li><a href="blog-detail.html">Blog Details</a></li>
                             </ul>
-                        </li>
-                        <li class="current "><a href="contact.html">Contact</a></li>
+                        </li>--%>
+                        <li><a href="Contact.aspx">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
@@ -140,13 +103,12 @@
                 <!--Contact Info-->
                 <div class="col-md-3 col-sm-5 col-xs-12">
                 	<div class="contact-info">
-                    	<h3>Contact</h3>
-                    	<div class="text">If you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business.</div>
+                    	<h3>Contact Us</h3>
+                    	<div class="text">Interested for a Collaboration? Created a new recipe? Hit us up!</div>
                     	<ul class="info">
-                            <li><strong>Email</strong> <a href="mailto:meeton@email.com">meeton@email.com</a></li>
+                            <li><strong>Email</strong> <a href="mailto:burp@cookaroo.com">burp@cookaroo.com</a></li>
                             <li><strong>Phone</strong> <a href="#">+49 123 456 789</a></li>
                             <li><strong>Fax</strong> +49 123 456 789</li>
-                            <li><strong>Website</strong> <a href="http://www.envato.com/">http://www.envato.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -193,7 +155,7 @@
                             </div>
                             
                             <div class="form-group text-right">
-                                <asp:Button ID="Button1" CssClass="theme-btn btn-style-one hvr-bounce-to-right" runat="server" Text="Send Feedback" OnClick="Button1_Click1" /><span class="fa fa-envelope"></span>
+                                <asp:Button ID="Button1" CssClass="theme-btn btn-style-one hvr-bounce-to-right fa fa-envelope" runat="server" Text="Send Feedback" OnClick="Button1_Click1" />
                             </div>
                             
                         </form>
@@ -204,25 +166,9 @@
             </div>
         
     </section>
-    
-    
-    <!--Intro Section-->
-    <section class="intro-section" style="background-image:url(images/parallax/image-1.jpg);">
-    	<div class="auto-container">
-        	<div class="row clearfix">
-                <div class="col-md-8 col-sm-8 col-xs-12 text-content">
-                	<h2>ARE YOU READY TO MANAGE YOUR OWN EVENTS?</h2>
-                	<div class="text">All of our virtual professionals are highly experienced in the areas in which they work and have been through a thorough recruitment process.</div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 text-right">
-                	<a href="#" class="theme-btn btn-style-one hvr-bounce-to-right"><span class="fa fa-play"></span>SIGN UP TODAY</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <!--Main Footer-->
+   
+        
+        <!--Main Footer-->
     <footer class="main-footer">
     	<!--Footer Upper-->
     	<div class="footer-upper">
@@ -233,12 +179,11 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                     	<div class="footer-widget contact-widget">
                         	<h3>Contact Us</h3>
-                        	<div class="text">If you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business.</div>
+                        	<div class="text">Tired of your normal day recipe's? Try something new. </div>
                             <ul class="info">
-                            	<li><strong>Email</strong> <a href="mailto:meeton@email.com">meeton@email.com</a></li>
+                            	<li><strong>Email</strong> <a href="mailto:meeton@email.com">burp@cookaroo.com</a></li>
                                 <li><strong>Phone</strong> <a href="#">+49 123 456 789</a></li>
                                 <li><strong>Fax</strong> +49 123 456 789</li>
-                                <li><strong>Website</strong> <a href="http://www.envato.com/">http://www.envato.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -246,14 +191,14 @@
                     <!--Footer Widget-->
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     	<div class="footer-widget services-widget">
-                        	<h3>Our Services</h3>
+                        	<h3>Our Clients</h3>
                         	<ul class="links">
-                            	<li><a href="#">Startup &amp; business meetings</a></li>
-                                <li><a href="#">Learning courses for beginners</a></li>
-                                <li><a href="#">Phone calling conferences</a></li>
-                                <li><a href="#">Business speeches &amp; presentations</a></li>
-                                <li><a href="#">Clients &amp; customer meetings</a></li>
-                                <li><a href="#">Rent a business conference room</a></li>
+                            	<li><a href="#">Dominos Pizza</a></li>
+                                <li><a href="#">August Spice</a></li>
+                                <li><a href="#">Taco Bell</a></li>
+                                <li><a href="#">Sagar Ratna</a></li>
+                                <li><a href="#">Taj Hotels</a></li>
+                                <li><a href="#">Foodpanda.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -261,14 +206,13 @@
                     <!--Footer Widget-->
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                     	<div class="footer-widget support-widget">
-                        	<h3>Our Support</h3>
+                        	<h3>Site Map</h3>
                         	<ul class="links">
-                            	<li><a href="#">How to get started?</a></li>
-                                <li><a href="#">Frequently asked questions</a></li>
-                                <li><a href="#">Customer testimonials</a></li>
-                                <li><a href="#">Create a personal account</a></li>
-                                <li><a href="#">Create a company account</a></li>
-                                <li><a href="#">Help &amp; Support Center</a></li>
+                            	<li><a href="Default.aspx">Home</a></li>
+                                <li><a href="BlogLoader.aspx">Our Posts</a></li>
+                                <li><a href="FAQ.aspx">FAQ</a></li>
+                                <li><a href="Contact.aspx">Contact Us</a></li>
+                                <li><a href="MyProfile.aspx">My Profile</a></li>
                             </ul>
                         </div>
                     </div>
@@ -277,7 +221,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                     	<div class="footer-widget newsletter-widget">
                         	<h3>Newsletter</h3>
-                        	<div class="text">We believe that analysis of your company and your customers is key in responding effectively.</div>
+                        	<div class="text">We send out tasty newsletters everymonth with a Coupon Code. Subscribe below to receive one.</div>
                             
                             <div class="form">
                             	<form method="post" action="http://wp1.themexlab.com/html/meeton-new-with-files/index.html">
@@ -310,20 +254,13 @@
             	<div class="row clearfix">
                 	
                     <!--Footer Logo-->
-                                        <div class="col-md-4 col-sm-4 col-xs-12 footer-logo wow bounceInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    	<a href="#"><img src="images/logo.png" alt=""></a>
+                    <div class="col-md-4 col-sm-4 col-xs-12 footer-logo wow bounceInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    	<a href="#"><img src="images/pablo.png" alt=""></a>
                     </div>
                     
                     <!--Footer Nav-->
                     <div class="col-md-8 col-sm-8 col-xs-12 footer-nav wow bounceInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    	<ul>
-                        	<li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Meetings</a></li>
-                            <li><a href="#">Schedule</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                    	:)
                     </div>
                     
                 </div>
@@ -335,7 +272,7 @@
         <div class="footer-bottom">
         	<div class="auto-container">
             	<div class="row clearfix">
-                    <div class="col-md-12 col-sm-12 col-xs-12 footer-logo">Copryright 2015 by Meeton | All rights reserved</div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 footer-logo">Copryright 2017 by Cook - A - Roo | All rights reserved</div>
                 </div>
             </div>
         </div>
