@@ -17,15 +17,6 @@
       <Association Name="Cuisine_Post" Member="Posts" ThisKey="cuisineid" OtherKey="cuisineid" Type="Post" />
     </Type>
   </Table>
-  <Table Name="dbo.Feedback" Member="Feedbacks">
-    <Type Name="Feedback">
-      <Column Name="feedbackid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="feedbackname" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-      <Column Name="feedbackemail" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-      <Column Name="feedbackmessage" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-      <Column Name="feedbacksubject" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Newsletter" Member="Newsletters">
     <Type Name="Newsletter">
       <Column Name="newsid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -104,6 +95,15 @@
       <Column Name="usertypeid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="uservalues" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
       <Association Name="Usertype_User" Member="Users" ThisKey="usertypeid" OtherKey="usertypeid" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Feedback" Member="Feedbacks">
+    <Type Name="Feedback">
+      <Column Name="feedbackid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="feedbackname" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="feedbackemail" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="feedbackmessage" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="feedbacksubject" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
