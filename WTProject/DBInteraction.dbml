@@ -99,7 +99,7 @@
   </Table>
   <Table Name="dbo.Feedback" Member="Feedbacks">
     <Type Name="Feedback">
-      <Column Name="feedbackid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="feedbackid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="feedbackname" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
       <Column Name="feedbackemail" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
       <Column Name="feedbackmessage" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
