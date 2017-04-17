@@ -102,10 +102,10 @@
                         <div class="post wow fadeInUp">
                             <!-- Image -->
                             <!--<img class="img-responsive" src="images/blog/1.jpg" alt="" />-->
-                            <asp:Image id="lb3" Height="400px" Width="1000px" class="img-responsive" alt="blog" runat="server" />
+                            <img src="" id ="headimage" runat="server" class="img-responsive" />
                             <div class="post-content wow fadeInUp">	
                                 <!-- Meta -->
-                                <div class="posted-date">July 19, 2014   /   <span>by</span> <a href="#">John</a>   /   <a href="#">12 Comments</a></div>
+                                <div runat="server" id="detailSection" class="posted-date"></div>
                                 <!-- Text -->
                                 <asp:Label ID="lb2" runat="server" ></asp:Label>
                                <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries. </p>
@@ -124,87 +124,18 @@
                     </div><!-- End Post -->	
                     
                     <!-- Author Section -->
-                    <div class="author wow fadeInUp">
-                        <!-- Image -->
-                        <img src="images/blog/author/1.jpg" alt="" />
-                            <div class="author-comment">
-                                <h5>John Michaels</h5>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.</p>
-                            </div>						
-                    <div class="clear"></div>							
+                    <h2 class="wow fadeInLeft">About the author</h2>
+                    <div style="height:300px" runat="server" id="authorData" class="author wow fadeInUp">
+                  
+                        							
                     </div><!-- Author Section Ends-->
 
                     <!-- Comment Section -->
                     <div class="post-comments">
                         <!-- Heading -->
                         <div class="title-head wow fadeInUp" > <asp:Label ID="total" runat="server"></asp:Label></div>
-                            <ul class="comment-list">
-                                <!-- Item -->
-                                <li class="wow fadeInUp">
-                                    <!-- Image -->
-                                    <img src="images/blog/comments/1.jpg" alt="" />
-                                    <!-- Comments -->
-                                    <div class="comment-details">
-                                        <div class="comments">
-                                            <!-- Comments Meta-->
-                                            <div class="comment-meta">
-                                                <!-- Author Name-->
-                                                <div class="user-name">
-                                                    Jenna
-                                                </div>
-                                                <div class="posted-date">
-                                                    July 19, 2014  <span> 5:50 AM</span>
-                                                </div>
-                                            </div>
-                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.	</p>
-                                        </div>
-                                        <a href="#" class="btn reply">reply</a>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li class="wow fadeInUp">
-                                    <!-- Image -->
-                                    <img src="images/blog/comments/2.jpg" alt="" />
-                                    <!-- Comments -->
-                                    <div class="comment-details">
-                                        <div class="comments">
-                                            <!-- Comments Meta-->
-                                            <div class="comment-meta">
-                                                <!-- Author Name-->
-                                                <div class="user-name">
-                                                    July
-                                                </div>
-                                                <div class="posted-date">
-                                                    July 19, 2014  <span> 5:50 AM</span>
-                                                </div>
-                                            </div>
-                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.	</p>
-                                        </div>
-                                        <a href="#" class="btn reply">reply</a>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li class="wow fadeInUp">
-                                    <!-- Image -->
-                                    <img src="images/blog/comments/3.jpg" alt="" />
-                                    <!-- Comments -->
-                                    <div class="comment-details">
-                                        <div class="comments">
-                                            <!-- Comments Meta-->
-                                            <div class="comment-meta">
-                                                <!-- Author Name-->
-                                                <div class="user-name">
-                                                    Marry
-                                                </div>
-                                                <div class="posted-date">
-                                                    July 19, 2014  <span> 5:50 AM</span>
-                                                </div>
-                                            </div>
-                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.	</p>
-                                        </div>
-                                        <a href="#" class="btn reply">reply</a>
-                                    </div>
-                                </li>
+                            <ul id="CommentList" class="comment-list" runat="server">
+                                
                             </ul>
                     </div>
                     
@@ -212,7 +143,7 @@
                     <!-- Add Your Comments -->
                     <div class="comments-form wow fadeInUp">
                         <!-- Heading -->
-                        <div class="title-head">add your comment</div>
+                        <div class="title-head">Add Your Comment</div>
                         <!-- Form -->
                         <div class="row form">
                             <div class="col-sm-12">
@@ -226,9 +157,6 @@
                                 <div class="text-right">
                                     <asp:Button  runat="server" Text="Add Comment" OnClick="SubmitOnClick"></asp:Button>
                                 </div>
-
-                                    
-
                                 </form>
                             </div>
                         </div>

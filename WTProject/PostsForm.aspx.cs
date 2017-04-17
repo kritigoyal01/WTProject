@@ -21,7 +21,7 @@ namespace WTProject
                 try
                 {
                     string filename = System.IO.Path.GetFileName(FileUpload1.FileName);
-                    FileUpload1.SaveAs(Server.MapPath("~/images/") + filename);
+                    FileUpload1.SaveAs(Server.MapPath("~/images/blog/") + filename);
                     StatusLabel.Text = "Upload status: File uploaded!";
                 }
                 catch (Exception ex)
@@ -36,7 +36,8 @@ namespace WTProject
                 p.writtencontent = TextBox2.Text;
                 p.userid =  Convert.ToInt32(DropDownList1.Text);
                 p.cuisineid = Convert.ToInt32(DropDownList2.Text);
-                p.headerimage = StatusLabel.Text;
+                p.headerimage = FileUpload1.FileName;
+                p.date_added = DateTime.Now.ToLocalTime();
                 context.Posts.InsertOnSubmit(p);
                 context.SubmitChanges();
                 Response.Write("<script>alert('inserted successfully!!');</script>");

@@ -85,32 +85,24 @@
     <!-- Page Banner -->
     <section class="page-banner" style="background-image:url(images/background/blog3.jpg);">
     	<div class="auto-container">
-        	<h1>Our Blog</h1>
+        	<p style="font-family:Calibri; font-size:50px;color:white">Help yourselves</p>
         </div>
     </section>
-    <br />
-    <br />
    
 	<!-- Blog -->
     <section id="blog" class="blog-area section">
         <div class="auto-container">
-            <div CssClass="row" runat="server" id="PostArea">
+            <div class="col-md-4">
                 
-                </div><!-- Blog Left Side Ends -->
-                
-                
-                <!-- Blog Sidebar Begins -->
-                <div class="col-md-4">
-                
-                    <div class="sidebar">
+                        <div class="sidebar">
                     
-                        <!-- Search -->
-                        <div class="search wow fadeInUp">
-                            <form>
-                                <input type="search" name="name" placeholder="SEARCH..">
-                                <input type="submit" value="submit">
-                            </form>
-                        </div>
+                            <!-- Search -->
+                            <%--<div class="search wow fadeInUp">
+                                <form>
+                                    <input type="search" name="name" placeholder="SEARCH..">
+                                    <input type="submit" value="submit">
+                                </form>
+                            </div>--%>
                         
                         <!-- Popular Post -->
                         <div class="blog/popular-post widget wow fadeInUp">
@@ -244,9 +236,13 @@
                     </div>
                     
                 </div><!-- Blog Sidebar Ends -->
-                
-            </div>
-        
+            <!-- Blog Left Side Ends -->
+                <div runat="server" id="PostArea" CssClass="row">
+
+                </div>
+                    <!-- Blog Sidebar Begins -->
+                    
+        </div>
         </div>
     </section>
     <!-- Our Blog Section Ends -->

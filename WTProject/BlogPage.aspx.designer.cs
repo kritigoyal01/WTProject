@@ -22,13 +22,22 @@ namespace WTProject {
         protected global::System.Web.UI.WebControls.Label lb1;
         
         /// <summary>
-        /// lb3 control.
+        /// headimage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image lb3;
+        protected global::System.Web.UI.HtmlControls.HtmlImage headimage;
+        
+        /// <summary>
+        /// detailSection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl detailSection;
         
         /// <summary>
         /// lb2 control.
@@ -40,6 +49,15 @@ namespace WTProject {
         protected global::System.Web.UI.WebControls.Label lb2;
         
         /// <summary>
+        /// authorData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl authorData;
+        
+        /// <summary>
         /// total control.
         /// </summary>
         /// <remarks>
@@ -47,6 +65,15 @@ namespace WTProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label total;
+        
+        /// <summary>
+        /// CommentList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CommentList;
         
         /// <summary>
         /// message control.

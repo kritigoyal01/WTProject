@@ -39,9 +39,6 @@ namespace WTProject
     partial void InsertNewsletter(Newsletter instance);
     partial void UpdateNewsletter(Newsletter instance);
     partial void DeleteNewsletter(Newsletter instance);
-    partial void InsertPost(Post instance);
-    partial void UpdatePost(Post instance);
-    partial void DeletePost(Post instance);
     partial void InsertPostsTagMapper(PostsTagMapper instance);
     partial void UpdatePostsTagMapper(PostsTagMapper instance);
     partial void DeletePostsTagMapper(PostsTagMapper instance);
@@ -63,6 +60,9 @@ namespace WTProject
     partial void InsertFeedback(Feedback instance);
     partial void UpdateFeedback(Feedback instance);
     partial void DeleteFeedback(Feedback instance);
+    partial void InsertPost(Post instance);
+    partial void UpdatePost(Post instance);
+    partial void DeletePost(Post instance);
     #endregion
 		
 		public DBInteractiobDataContext() : 
@@ -119,14 +119,6 @@ namespace WTProject
 			}
 		}
 		
-		public System.Data.Linq.Table<Post> Posts
-		{
-			get
-			{
-				return this.GetTable<Post>();
-			}
-		}
-		
 		public System.Data.Linq.Table<PostsTagMapper> PostsTagMappers
 		{
 			get
@@ -180,6 +172,14 @@ namespace WTProject
 			get
 			{
 				return this.GetTable<Feedback>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Post> Posts
+		{
+			get
+			{
+				return this.GetTable<Post>();
 			}
 		}
 	}
@@ -679,326 +679,6 @@ namespace WTProject
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Posts")]
-	public partial class Post : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _postsid;
-		
-		private string _posttitle;
-		
-		private System.Nullable<int> _cuisineid;
-		
-		private string _writtencontent;
-		
-		private string _headerimage;
-		
-		private System.Nullable<int> _userid;
-		
-		private EntitySet<PostsTagMapper> _PostsTagMappers;
-		
-		private EntitySet<Rating> _Ratings;
-		
-		private EntityRef<Cuisine> _Cuisine;
-		
-		private EntityRef<User> _User;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnpostsidChanging(int value);
-    partial void OnpostsidChanged();
-    partial void OnposttitleChanging(string value);
-    partial void OnposttitleChanged();
-    partial void OncuisineidChanging(System.Nullable<int> value);
-    partial void OncuisineidChanged();
-    partial void OnwrittencontentChanging(string value);
-    partial void OnwrittencontentChanged();
-    partial void OnheaderimageChanging(string value);
-    partial void OnheaderimageChanged();
-    partial void OnuseridChanging(System.Nullable<int> value);
-    partial void OnuseridChanged();
-    #endregion
-		
-		public Post()
-		{
-			this._PostsTagMappers = new EntitySet<PostsTagMapper>(new Action<PostsTagMapper>(this.attach_PostsTagMappers), new Action<PostsTagMapper>(this.detach_PostsTagMappers));
-			this._Ratings = new EntitySet<Rating>(new Action<Rating>(this.attach_Ratings), new Action<Rating>(this.detach_Ratings));
-			this._Cuisine = default(EntityRef<Cuisine>);
-			this._User = default(EntityRef<User>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_postsid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int postsid
-		{
-			get
-			{
-				return this._postsid;
-			}
-			set
-			{
-				if ((this._postsid != value))
-				{
-					this.OnpostsidChanging(value);
-					this.SendPropertyChanging();
-					this._postsid = value;
-					this.SendPropertyChanged("postsid");
-					this.OnpostsidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_posttitle", DbType="VarChar(225)")]
-		public string posttitle
-		{
-			get
-			{
-				return this._posttitle;
-			}
-			set
-			{
-				if ((this._posttitle != value))
-				{
-					this.OnposttitleChanging(value);
-					this.SendPropertyChanging();
-					this._posttitle = value;
-					this.SendPropertyChanged("posttitle");
-					this.OnposttitleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cuisineid", DbType="Int")]
-		public System.Nullable<int> cuisineid
-		{
-			get
-			{
-				return this._cuisineid;
-			}
-			set
-			{
-				if ((this._cuisineid != value))
-				{
-					if (this._Cuisine.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OncuisineidChanging(value);
-					this.SendPropertyChanging();
-					this._cuisineid = value;
-					this.SendPropertyChanged("cuisineid");
-					this.OncuisineidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_writtencontent", DbType="VarChar(MAX)")]
-		public string writtencontent
-		{
-			get
-			{
-				return this._writtencontent;
-			}
-			set
-			{
-				if ((this._writtencontent != value))
-				{
-					this.OnwrittencontentChanging(value);
-					this.SendPropertyChanging();
-					this._writtencontent = value;
-					this.SendPropertyChanged("writtencontent");
-					this.OnwrittencontentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_headerimage", DbType="VarChar(225)")]
-		public string headerimage
-		{
-			get
-			{
-				return this._headerimage;
-			}
-			set
-			{
-				if ((this._headerimage != value))
-				{
-					this.OnheaderimageChanging(value);
-					this.SendPropertyChanging();
-					this._headerimage = value;
-					this.SendPropertyChanged("headerimage");
-					this.OnheaderimageChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userid", DbType="Int")]
-		public System.Nullable<int> userid
-		{
-			get
-			{
-				return this._userid;
-			}
-			set
-			{
-				if ((this._userid != value))
-				{
-					if (this._User.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnuseridChanging(value);
-					this.SendPropertyChanging();
-					this._userid = value;
-					this.SendPropertyChanged("userid");
-					this.OnuseridChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Post_PostsTagMapper", Storage="_PostsTagMappers", ThisKey="postsid", OtherKey="postsid")]
-		public EntitySet<PostsTagMapper> PostsTagMappers
-		{
-			get
-			{
-				return this._PostsTagMappers;
-			}
-			set
-			{
-				this._PostsTagMappers.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Post_Rating", Storage="_Ratings", ThisKey="postsid", OtherKey="postsid")]
-		public EntitySet<Rating> Ratings
-		{
-			get
-			{
-				return this._Ratings;
-			}
-			set
-			{
-				this._Ratings.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cuisine_Post", Storage="_Cuisine", ThisKey="cuisineid", OtherKey="cuisineid", IsForeignKey=true)]
-		public Cuisine Cuisine
-		{
-			get
-			{
-				return this._Cuisine.Entity;
-			}
-			set
-			{
-				Cuisine previousValue = this._Cuisine.Entity;
-				if (((previousValue != value) 
-							|| (this._Cuisine.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Cuisine.Entity = null;
-						previousValue.Posts.Remove(this);
-					}
-					this._Cuisine.Entity = value;
-					if ((value != null))
-					{
-						value.Posts.Add(this);
-						this._cuisineid = value.cuisineid;
-					}
-					else
-					{
-						this._cuisineid = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Cuisine");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Post", Storage="_User", ThisKey="userid", OtherKey="userid", IsForeignKey=true)]
-		public User User
-		{
-			get
-			{
-				return this._User.Entity;
-			}
-			set
-			{
-				User previousValue = this._User.Entity;
-				if (((previousValue != value) 
-							|| (this._User.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._User.Entity = null;
-						previousValue.Posts.Remove(this);
-					}
-					this._User.Entity = value;
-					if ((value != null))
-					{
-						value.Posts.Add(this);
-						this._userid = value.userid;
-					}
-					else
-					{
-						this._userid = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("User");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_PostsTagMappers(PostsTagMapper entity)
-		{
-			this.SendPropertyChanging();
-			entity.Post = this;
-		}
-		
-		private void detach_PostsTagMappers(PostsTagMapper entity)
-		{
-			this.SendPropertyChanging();
-			entity.Post = null;
-		}
-		
-		private void attach_Ratings(Rating entity)
-		{
-			this.SendPropertyChanging();
-			entity.Post = this;
-		}
-		
-		private void detach_Ratings(Rating entity)
-		{
-			this.SendPropertyChanging();
-			entity.Post = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PostsTagMapper")]
 	public partial class PostsTagMapper : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1011,9 +691,9 @@ namespace WTProject
 		
 		private int _id;
 		
-		private EntityRef<Post> _Post;
-		
 		private EntityRef<Tag> _Tag;
+		
+		private EntityRef<Post> _Post;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1029,8 +709,8 @@ namespace WTProject
 		
 		public PostsTagMapper()
 		{
-			this._Post = default(EntityRef<Post>);
 			this._Tag = default(EntityRef<Tag>);
+			this._Post = default(EntityRef<Post>);
 			OnCreated();
 		}
 		
@@ -1102,40 +782,6 @@ namespace WTProject
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Post_PostsTagMapper", Storage="_Post", ThisKey="postsid", OtherKey="postsid", IsForeignKey=true)]
-		public Post Post
-		{
-			get
-			{
-				return this._Post.Entity;
-			}
-			set
-			{
-				Post previousValue = this._Post.Entity;
-				if (((previousValue != value) 
-							|| (this._Post.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Post.Entity = null;
-						previousValue.PostsTagMappers.Remove(this);
-					}
-					this._Post.Entity = value;
-					if ((value != null))
-					{
-						value.PostsTagMappers.Add(this);
-						this._postsid = value.postsid;
-					}
-					else
-					{
-						this._postsid = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Post");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tag_PostsTagMapper", Storage="_Tag", ThisKey="tagsid", OtherKey="tagsid", IsForeignKey=true)]
 		public Tag Tag
 		{
@@ -1166,6 +812,40 @@ namespace WTProject
 						this._tagsid = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Tag");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Post_PostsTagMapper", Storage="_Post", ThisKey="postsid", OtherKey="postsid", IsForeignKey=true)]
+		public Post Post
+		{
+			get
+			{
+				return this._Post.Entity;
+			}
+			set
+			{
+				Post previousValue = this._Post.Entity;
+				if (((previousValue != value) 
+							|| (this._Post.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Post.Entity = null;
+						previousValue.PostsTagMappers.Remove(this);
+					}
+					this._Post.Entity = value;
+					if ((value != null))
+					{
+						value.PostsTagMappers.Add(this);
+						this._postsid = value.postsid;
+					}
+					else
+					{
+						this._postsid = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Post");
 				}
 			}
 		}
@@ -1203,9 +883,9 @@ namespace WTProject
 		
 		private System.Nullable<int> _postsid;
 		
-		private EntityRef<Post> _Post;
-		
 		private EntityRef<RatingValue> _RatingValue;
+		
+		private EntityRef<Post> _Post;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1221,8 +901,8 @@ namespace WTProject
 		
 		public Rating()
 		{
-			this._Post = default(EntityRef<Post>);
 			this._RatingValue = default(EntityRef<RatingValue>);
+			this._Post = default(EntityRef<Post>);
 			OnCreated();
 		}
 		
@@ -1294,40 +974,6 @@ namespace WTProject
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Post_Rating", Storage="_Post", ThisKey="postsid", OtherKey="postsid", IsForeignKey=true)]
-		public Post Post
-		{
-			get
-			{
-				return this._Post.Entity;
-			}
-			set
-			{
-				Post previousValue = this._Post.Entity;
-				if (((previousValue != value) 
-							|| (this._Post.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Post.Entity = null;
-						previousValue.Ratings.Remove(this);
-					}
-					this._Post.Entity = value;
-					if ((value != null))
-					{
-						value.Ratings.Add(this);
-						this._postsid = value.postsid;
-					}
-					else
-					{
-						this._postsid = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Post");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RatingValue_Rating", Storage="_RatingValue", ThisKey="ratingvalueid", OtherKey="ratingvalueid", IsForeignKey=true)]
 		public RatingValue RatingValue
 		{
@@ -1358,6 +1004,40 @@ namespace WTProject
 						this._ratingvalueid = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("RatingValue");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Post_Rating", Storage="_Post", ThisKey="postsid", OtherKey="postsid", IsForeignKey=true)]
+		public Post Post
+		{
+			get
+			{
+				return this._Post.Entity;
+			}
+			set
+			{
+				Post previousValue = this._Post.Entity;
+				if (((previousValue != value) 
+							|| (this._Post.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Post.Entity = null;
+						previousValue.Ratings.Remove(this);
+					}
+					this._Post.Entity = value;
+					if ((value != null))
+					{
+						value.Ratings.Add(this);
+						this._postsid = value.postsid;
+					}
+					else
+					{
+						this._postsid = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Post");
 				}
 			}
 		}
@@ -2255,6 +1935,350 @@ namespace WTProject
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Posts")]
+	public partial class Post : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _postsid;
+		
+		private string _posttitle;
+		
+		private System.Nullable<int> _cuisineid;
+		
+		private string _writtencontent;
+		
+		private string _headerimage;
+		
+		private System.Nullable<int> _userid;
+		
+		private System.Nullable<System.DateTime> _date_added;
+		
+		private EntitySet<PostsTagMapper> _PostsTagMappers;
+		
+		private EntitySet<Rating> _Ratings;
+		
+		private EntityRef<Cuisine> _Cuisine;
+		
+		private EntityRef<User> _User;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnpostsidChanging(int value);
+    partial void OnpostsidChanged();
+    partial void OnposttitleChanging(string value);
+    partial void OnposttitleChanged();
+    partial void OncuisineidChanging(System.Nullable<int> value);
+    partial void OncuisineidChanged();
+    partial void OnwrittencontentChanging(string value);
+    partial void OnwrittencontentChanged();
+    partial void OnheaderimageChanging(string value);
+    partial void OnheaderimageChanged();
+    partial void OnuseridChanging(System.Nullable<int> value);
+    partial void OnuseridChanged();
+    partial void Ondate_addedChanging(System.Nullable<System.DateTime> value);
+    partial void Ondate_addedChanged();
+    #endregion
+		
+		public Post()
+		{
+			this._PostsTagMappers = new EntitySet<PostsTagMapper>(new Action<PostsTagMapper>(this.attach_PostsTagMappers), new Action<PostsTagMapper>(this.detach_PostsTagMappers));
+			this._Ratings = new EntitySet<Rating>(new Action<Rating>(this.attach_Ratings), new Action<Rating>(this.detach_Ratings));
+			this._Cuisine = default(EntityRef<Cuisine>);
+			this._User = default(EntityRef<User>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_postsid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int postsid
+		{
+			get
+			{
+				return this._postsid;
+			}
+			set
+			{
+				if ((this._postsid != value))
+				{
+					this.OnpostsidChanging(value);
+					this.SendPropertyChanging();
+					this._postsid = value;
+					this.SendPropertyChanged("postsid");
+					this.OnpostsidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_posttitle", DbType="VarChar(225)")]
+		public string posttitle
+		{
+			get
+			{
+				return this._posttitle;
+			}
+			set
+			{
+				if ((this._posttitle != value))
+				{
+					this.OnposttitleChanging(value);
+					this.SendPropertyChanging();
+					this._posttitle = value;
+					this.SendPropertyChanged("posttitle");
+					this.OnposttitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cuisineid", DbType="Int")]
+		public System.Nullable<int> cuisineid
+		{
+			get
+			{
+				return this._cuisineid;
+			}
+			set
+			{
+				if ((this._cuisineid != value))
+				{
+					if (this._Cuisine.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OncuisineidChanging(value);
+					this.SendPropertyChanging();
+					this._cuisineid = value;
+					this.SendPropertyChanged("cuisineid");
+					this.OncuisineidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_writtencontent", DbType="VarChar(MAX)")]
+		public string writtencontent
+		{
+			get
+			{
+				return this._writtencontent;
+			}
+			set
+			{
+				if ((this._writtencontent != value))
+				{
+					this.OnwrittencontentChanging(value);
+					this.SendPropertyChanging();
+					this._writtencontent = value;
+					this.SendPropertyChanged("writtencontent");
+					this.OnwrittencontentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_headerimage", DbType="VarChar(225)")]
+		public string headerimage
+		{
+			get
+			{
+				return this._headerimage;
+			}
+			set
+			{
+				if ((this._headerimage != value))
+				{
+					this.OnheaderimageChanging(value);
+					this.SendPropertyChanging();
+					this._headerimage = value;
+					this.SendPropertyChanged("headerimage");
+					this.OnheaderimageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userid", DbType="Int")]
+		public System.Nullable<int> userid
+		{
+			get
+			{
+				return this._userid;
+			}
+			set
+			{
+				if ((this._userid != value))
+				{
+					if (this._User.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnuseridChanging(value);
+					this.SendPropertyChanging();
+					this._userid = value;
+					this.SendPropertyChanged("userid");
+					this.OnuseridChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_added", DbType="DateTime")]
+		public System.Nullable<System.DateTime> date_added
+		{
+			get
+			{
+				return this._date_added;
+			}
+			set
+			{
+				if ((this._date_added != value))
+				{
+					this.Ondate_addedChanging(value);
+					this.SendPropertyChanging();
+					this._date_added = value;
+					this.SendPropertyChanged("date_added");
+					this.Ondate_addedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Post_PostsTagMapper", Storage="_PostsTagMappers", ThisKey="postsid", OtherKey="postsid")]
+		public EntitySet<PostsTagMapper> PostsTagMappers
+		{
+			get
+			{
+				return this._PostsTagMappers;
+			}
+			set
+			{
+				this._PostsTagMappers.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Post_Rating", Storage="_Ratings", ThisKey="postsid", OtherKey="postsid")]
+		public EntitySet<Rating> Ratings
+		{
+			get
+			{
+				return this._Ratings;
+			}
+			set
+			{
+				this._Ratings.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cuisine_Post", Storage="_Cuisine", ThisKey="cuisineid", OtherKey="cuisineid", IsForeignKey=true)]
+		public Cuisine Cuisine
+		{
+			get
+			{
+				return this._Cuisine.Entity;
+			}
+			set
+			{
+				Cuisine previousValue = this._Cuisine.Entity;
+				if (((previousValue != value) 
+							|| (this._Cuisine.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Cuisine.Entity = null;
+						previousValue.Posts.Remove(this);
+					}
+					this._Cuisine.Entity = value;
+					if ((value != null))
+					{
+						value.Posts.Add(this);
+						this._cuisineid = value.cuisineid;
+					}
+					else
+					{
+						this._cuisineid = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Cuisine");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Post", Storage="_User", ThisKey="userid", OtherKey="userid", IsForeignKey=true)]
+		public User User
+		{
+			get
+			{
+				return this._User.Entity;
+			}
+			set
+			{
+				User previousValue = this._User.Entity;
+				if (((previousValue != value) 
+							|| (this._User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._User.Entity = null;
+						previousValue.Posts.Remove(this);
+					}
+					this._User.Entity = value;
+					if ((value != null))
+					{
+						value.Posts.Add(this);
+						this._userid = value.userid;
+					}
+					else
+					{
+						this._userid = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_PostsTagMappers(PostsTagMapper entity)
+		{
+			this.SendPropertyChanging();
+			entity.Post = this;
+		}
+		
+		private void detach_PostsTagMappers(PostsTagMapper entity)
+		{
+			this.SendPropertyChanging();
+			entity.Post = null;
+		}
+		
+		private void attach_Ratings(Rating entity)
+		{
+			this.SendPropertyChanging();
+			entity.Post = this;
+		}
+		
+		private void detach_Ratings(Rating entity)
+		{
+			this.SendPropertyChanging();
+			entity.Post = null;
 		}
 	}
 }

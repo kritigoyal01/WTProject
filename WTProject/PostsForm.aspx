@@ -12,19 +12,17 @@
         
         <asp:Label ID="Label1" runat="server" Text="Post Title"></asp:Label> <asp:TextBox ID="TextBox1" runat="server" style="margin-left: 26px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidatorTitle" runat="server" ControlToValidate="TextBox1" Text="Title is required." ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidatorTitle" runat="server" ErrorMessage="string" ControlToValidate="TextBox1" ValidationExpression="string" ValidationGroup="string" Text="Characters must be between a-z"></asp:RegularExpressionValidator>
         <br/><br/>
         
 
-        <asp:Label ID="Label2" runat="server" Text="Content"></asp:Label> <asp:TextBox ID="TextBox2" runat="server" style="margin-left: 26px"></asp:TextBox>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidatorContent" runat="server" ErrorMessage="string" ControlToValidate="TextBox1" ValidationExpression="string" ValidationGroup="string" Text="Characters must be between a-z"></asp:RegularExpressionValidator>
+        <asp:Label ID="Label2" runat="server" Text="Content"></asp:Label> <asp:TextBox TextMode="MultiLine" Rows="13" Columns="80" ID="TextBox2" runat="server" style="margin-left: 26px"></asp:TextBox>
 
         <asp:RequiredFieldValidator ID="RequiredFieldValidatorContent" runat="server" ControlToValidate="TextBox2" Text="Content is required." ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
 
         <br/><br/>
 
-        <asp:Label ID="Label4" runat="server" Text="User ID"></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" style="margin-left: 26px" DataSourceID="LinqDataSource1" DataTextField="userid" DataValueField="userid"></asp:DropDownList>
-        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" Select="new (userid)" TableName="Users">
+        <asp:Label ID="Label4" runat="server" Text="User ID"></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" style="margin-left: 26px" DataSourceID="LinqDataSource1" DataTextField="name" DataValueField="userid"></asp:DropDownList>
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" Select="new (userid, name)" TableName="Users" Where="usertypeid == 1">
         </asp:LinqDataSource>
         <br/><br/>
 
