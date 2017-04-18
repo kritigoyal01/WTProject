@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BlogPage.aspx.cs" Inherits="WTProject.BlogPage" %>
-
+<%@ OutputCache Duration="20" VaryByParam="id" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -46,11 +46,11 @@
                 
                 <div class="navbar-collapse collapse clearfix">                                                                                              
                     <ul class="navigation">
-                        <li class="current"><a href="Default.aspx">Home</a>          
+                        <li><a href="Default.aspx">Home</a>          
                         </li>
                         <li><a href="About.aspx">About</a>                            
                         </li>
-                        <li><a href="BlogLoader.aspx">Posts</a></li>
+                        <li class="current"><a href="BlogLoader.aspx">Posts</a></li>
                             
                         <li><a href="Faq.aspx">FAQ
                             </a>
@@ -181,48 +181,10 @@
                         <!-- Popular Post -->
                         <div class="blog/popular-post widget wow fadeInUp">
                             <!-- Title -->
-                            <h2>most popular posts</h2>
-                            <ul class="popular-list">
+                            <h2>Related Posts</h2>
+                            <ul runat="server" id="RelatedPosts" class="popular-list">
                                 <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/1.jpg" alt="" /></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
-                                        <div class="posted-date">July 19, 2014</div>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/2.jpg" alt="" /></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
-                                        <div class="posted-date">July 19, 2014</div>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/3.jpg" alt="" /></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
-                                        <div class="posted-date">July 19, 2014</div>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/4.jpg" alt="" /></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
-                                        <div class="posted-date">July 19, 2014</div>
-                                    </div>
-                                </li>
+                                
                             </ul>
                         </div><!-- Popular Post Ends-->
                         
@@ -230,47 +192,8 @@
                         <div class="blog/popular-post widget wow fadeInUp">
                             <!-- Title -->
                             <h2>Newest posts</h2>
-                            <ul class="popular-list">
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/1.jpg" alt="" /></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
-                                        <div class="posted-date">July 19, 2014</div>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/2.jpg" alt="" /></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
-                                        <div class="posted-date">July 19, 2014</div>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/3.jpg" alt="" /></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
-                                        <div class="posted-date">July 19, 2014</div>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/4.jpg" alt="" /></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="#">Lorem ipsum blog post</a></h3>
-                                        <div class="posted-date">July 19, 2014</div>
-                                    </div>
-                                </li>
+                            <ul runat="server" id="RecentList" class="popular-list">
+                                
                             </ul>
                         </div><!-- Newest Post Ends-->
                         
@@ -279,31 +202,8 @@
                         <div class="category widget wow fadeInUp">
                             <!-- Title -->
                             <h2>Categories</h2>
-                            <ul class="category-list">
-                                <li>
-                                    <h3><a href="#">Asset Protection</a></h3>
-                                </li>
-                                <li>
-                                    <h3><a href="#">Bankruptcy</a></h3>
-                                </li>
-                                <li>
-                                    <h3><a href="#">Bankruptcy Alternatives</a></h3>
-                                </li>
-                                <li>
-                                    <h3><a href="#">Clients</a></h3>
-                                </li>
-                                <li>
-                                    <h3><a href="#">Credit Cards</a></h3>
-                                </li>
-                                <li>
-                                    <h3><a href="#">Pilates</a></h3>
-                                </li>
-                                <li>
-                                    <h3><a href="#">Running</a></h3>
-                                </li>
-                                <li>
-                                    <h3><a href="#">Estate Planning</a></h3>
-                                </li>
+                            <ul runat="server" id="CuisineList" class="category-list">
+                                
                             </ul>
                         </div><!-- Category Ends-->
                         

@@ -45,26 +45,49 @@ namespace WTProject
 
                 LoadBlogComponents();
                 LoadCommentsForPost();
-                //Comment comm = new Comment();
-                //var nmbr = from c in dc.Comments
-                //           select c;
-                //var counts = nmbr.Count();
-
-                //total.Text = counts + "Comments";
-
-                //var comment = from c in dc.Comments
-                //              join u in dc.Users on c.user_id equals u.userid
-                //              select new { u.name, u.img, c.comments, c.date_added };
-
-                //foreach (var co in comment)
-                //{
-                //    Response.Write(co.name + co.comments + co.date_added + co.img);
-                //}
+                LoadSideBar();
             }
             else
             {
                 Response.Write("<script>alert('Invalid page requested.');</script>");
                 Response.Redirect("~/BlogLoader.aspx");
+            }
+        }
+
+        protected void LoadSideBar()
+        {
+            using (DBInteractiobDataContext dc = new DBInteractiobDataContext())
+            {
+                //Fetching post data and displaying it
+                if (p != null && u != null)
+                {
+                    var posts = from n in dc.Posts
+                                where n.cuisineid == p.cuisineid
+                                select n;
+                    Random rnd = new Random();
+                    List<Post> templist = posts.OrderBy(user => rnd.Next()).Take(3).ToList();
+
+                    foreach(Post post in templist)
+                    {
+                        RelatedPosts.InnerHtml = RelatedPosts.InnerHtml + $"<li><a href = 'BlogPage.aspx?id={post.postsid}'><img src = 'images/blog/{post.headerimage}' height='84px' width = '82px' alt = '' /></a><div class='content'><h3>{post.posttitle}</h3><div class='posted-date'>{post.date_added}</div></div></li>";
+                    }
+
+                    templist = posts.OrderByDescending(x => x.postsid).Take(3).ToList();
+                    foreach (var post in templist)
+                    {
+                        RecentList.InnerHtml = RecentList.InnerHtml + $"<li><a href = 'BlogPage.aspx?id={post.postsid}'><img src = 'images/blog/{post.headerimage}' height = '84px' width = '82px' alt = '' /><div class='content'><h3>{post.posttitle}</h3><div class='posted-date'>{post.date_added}</div></div></a></li>";
+                    }
+
+                    var list = from n in dc.Cuisines
+                               select n;
+
+                    List<Cuisine> cuisines = list.ToList();
+
+                    foreach (Cuisine cuisine in cuisines)
+                    {
+                        CuisineList.InnerHtml = CuisineList.InnerHtml + $"<li><h3><a href='BlogLoader.aspx?cuisine={cuisine.cuisineid}'>{cuisine.cuisinename}</h3></li>";
+                    }
+                }
             }
         }
 
