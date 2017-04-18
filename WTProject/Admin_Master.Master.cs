@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace WTProject
 {
-    public partial class Admin_Comments : System.Web.UI.Page
+    public partial class Admin_Master : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
         {
 
         }

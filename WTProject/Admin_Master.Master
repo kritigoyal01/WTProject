@@ -1,15 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Main_Page.aspx.cs" Inherits="WTProject.Admin_Main_Page" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin_Master.master.cs" Inherits="WTProject.Admin_Master" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="width: 1251px; margin-left:30px" >
-        <asp:Menu ID="Menu1" Style="display:inline;font-size:medium; margin:20px;text-align:center;padding:15px; border-bottom:groove" runat="server"  Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick">
+    <div style="width: 1251px ; margin-left:30px">
+         <asp:Menu ID="Menu1" Style="display:inline;font-size:medium; margin:10px;  padding:15px;text-align:center; border-bottom:groove" runat="server"  Orientation="Horizontal" >
             <Items>
                 <asp:MenuItem Text="Posts" Value="ViewAllPosts"  NavigateUrl="~/Admin_Posts.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="Cuisine" Value="ViewCuisine" NavigateUrl="~/Admin_Cuisine.aspx"></asp:MenuItem>
@@ -25,7 +27,11 @@
              <StaticHoverStyle ForeColor ="Violet" />  
         </asp:Menu>
         
-    </div>    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" Visible="true">
+           
+           
+        </asp:ContentPlaceHolder>
+    </div>
     </form>
 </body>
 </html>

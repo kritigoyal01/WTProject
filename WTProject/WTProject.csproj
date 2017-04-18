@@ -100,6 +100,7 @@
     <Content Include="Admin_Cuisine.aspx" />
     <Content Include="Admin_Feedback.aspx" />
     <Content Include="Admin_Main_Page.aspx" />
+    <Content Include="Admin_Newsletter.aspx" />
     <Content Include="Admin_Posts.aspx" />
     <Content Include="Admin_Rating.aspx" />
     <Content Include="Admin_RatingValue.aspx" />
@@ -126,6 +127,7 @@
     <Content Include="RatingValueForm.aspx" />
     <Content Include="RegisterUser.aspx" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="Admin_Master.Master" />
     <None Include="DBInteraction.dbml.layout">
       <DependentUpon>DBInteraction.dbml</DependentUpon>
     </None>
@@ -175,6 +177,20 @@
     </Compile>
     <Compile Include="Admin_Main_Page.aspx.designer.cs">
       <DependentUpon>Admin_Main_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master.Master.cs">
+      <DependentUpon>Admin_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master.Master.designer.cs">
+      <DependentUpon>Admin_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Newsletter.aspx.cs">
+      <DependentUpon>Admin_Newsletter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Newsletter.aspx.designer.cs">
+      <DependentUpon>Admin_Newsletter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Posts.aspx.cs">
       <DependentUpon>Admin_Posts.aspx</DependentUpon>
