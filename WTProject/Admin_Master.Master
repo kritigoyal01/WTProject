@@ -21,6 +21,7 @@
                  <asp:MenuItem Text="RatingValue" Value="ViewRatingValue" NavigateUrl="~/Admin_RatingValue.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="Users" Value="ViewUsers" NavigateUrl="~/Admin_Users.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="Newsletter" Value="Newsletter" NavigateUrl="~/Admin_Newsletter.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Logout.aspx"></asp:MenuItem>
             </Items>
         <StaticMenuItemStyle HorizontalPadding="45px" />
           <StaticSelectedStyle ForeColor="DarkRed" Font-Bold="true"/>

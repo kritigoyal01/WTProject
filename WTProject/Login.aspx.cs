@@ -16,17 +16,6 @@ namespace WTProject
             
         }
 
-       /* protected void LoginButton_Click(object sendet,EventArgs e)
-        {
-            if(u.userid ==1 )
-            {
-                Response.Redirect("Admin_Main_Page.aspx");
-            }
-            else
-            {
-                Response.Redirect("Default.aspx");
-             }
-        }*/
         private bool SiteSpecificAuthenticationMethod(string UserName, string Password)
         {
             try
@@ -52,9 +41,22 @@ namespace WTProject
         {
             bool Authenticated = false;
             Authenticated = SiteSpecificAuthenticationMethod(Login1.UserName, Login1.Password);
-      
+
+            User u = (User)Session["user"];
+            if(Authenticated == true)
+            {
+                if (u.usertypeid == 1)
+                {
+                    e.Authenticated = Authenticated;
+                    Response.Redirect("~/Admin_Main_Page.aspx");
+                }
+                else if (u.usertypeid == 2)
+                {
+                    e.Authenticated = Authenticated;
+                    Response.Redirect("~/Default.aspx");
+                }
+            }
             e.Authenticated = Authenticated;
-           
         }
     }
 }

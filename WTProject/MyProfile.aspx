@@ -134,7 +134,7 @@
                                   
                                 </p>
                                 <p>
-                                    <label></label>
+                                    <label><a href="Logout.aspx">Logout</a></label>
                                     
                                 </p>
                                 <p>

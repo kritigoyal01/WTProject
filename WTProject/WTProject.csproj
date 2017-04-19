@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="NewsLetterForm.aspx" />
     <Content Include="Admin_Comments.aspx" />
     <Content Include="Admin_Cuisine.aspx" />
@@ -151,6 +152,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewsLetterForm.aspx.cs">
       <DependentUpon>NewsLetterForm.aspx</DependentUpon>
