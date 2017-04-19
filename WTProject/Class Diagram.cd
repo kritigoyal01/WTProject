@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="WTProject.About" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>About.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Comments" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Comments.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Cuisine" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Cuisine.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Feedback" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Feedback.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Main_Page" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIBAAAAQAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Main_Page.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Master" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAABIAAAAAQAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Master.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Newsletter" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Newsletter.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Posts" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Posts.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Rating" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Rating.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_RatingValue" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAgAAAAAAgAAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_RatingValue.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Admin_Users" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Admin_Users.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.BlogLoader" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAiAAAAAAAAAAAAAAAIAAAAAAAAgAAAAIEAAE=</HashCode>
+      <FileName>BlogLoader.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.BlogPage" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAADAACEACAAAAAQAAAAAAAAAAQAEKAAAJAAjE=</HashCode>
+      <FileName>BlogPage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.ChangePassword" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>ChangePassword.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Comment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAhAIlpEAAEAIAAQAMAAAABiCAAAAQAghABEABAgAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.CommentPostMapper" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAACAAEAAAAAAAAA=</HashCode>
+      <FileName>CommentPostMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Contact" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAgAAAAAIAAAIAAAAAMQAAA=</HashCode>
+      <FileName>Contact.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Cuisine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgACABAAAAAAAARQEAAAATiCAAAAIAAAIAAAAiDAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.CuisineForm" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAACAAAAAAAgAAAAAAAIAAQAAAAAAAAAQIAAAg=</HashCode>
+      <FileName>CuisineForm.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.DBInteractiobDataContext" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJyAACQAAAJACCEELpgGQEEAISkAAWEI4QgACgoAIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Faq" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Faq.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Feedback" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAgGAABAAgABAgAQAEIABIBqKAAAAAAAAoEEEAAAgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.Newsletter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAQDgAAIAEBAQAEggAABjKYAAACQAAAgBBCAACg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.NewsLetterForm" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAgEAAgAEAAAEAgAAgAIAAQQAAAAAAAAAIAAgE=</HashCode>
+      <FileName>NewsLetterForm.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Post" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCQhCBgJACAFAYKAQwEAIAIXjCIEAA0IggIoQABQAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.PostCuisineMapper" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAEAAAAAAAAA=</HashCode>
+      <FileName>PostCuisineMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.PostsForm" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAgEAAYAAAAAAAAAAgAIAAQQAAAAAAAAQIAAAA=</HashCode>
+      <FileName>PostsForm.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.PostsTagMapper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgAAAJAAAgAAAAQAFAAABBjCAAAAQggAAAAAgQhgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.PostTagMapper" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAA=</HashCode>
+      <FileName>PostTagMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.PostUserMapper" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAAAAAAA=</HashCode>
+      <FileName>PostUserMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Rating" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIgAAIJAAAAAAAAQAEBAAgByCQAAAQAgAAAEAwABAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.RatingForm" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAhAAAAAIAAQAAAAAAAAAQIAAgA=</HashCode>
+      <FileName>RatingValueForm.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.RatingForm1" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAYAAAgAAAAAYAEAQAAAAAAAAAIAAAA=</HashCode>
+      <FileName>RatingForm.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.RatingPostMapper" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAAAAAAA=</HashCode>
+      <FileName>RatingPostMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.RatingRatingValueMapper" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAEAAA=</HashCode>
+      <FileName>RatingRatingValueMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.RatingValue" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgAAoJAAAAAAAAQgEAIAAliCAgAAAAAAAgAAQAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.Receipe" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.RegisterUser" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAwAEAAAEAggAgAAAAUQACCAAAAAAIAIgA=</HashCode>
+      <FileName>RegisterUser.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Tag" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAABBAAABAAAAQAFAAAABjCIAAAkgAACAAAgAgAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAzOAgRgKCAGAAkXA0gggEHiCKEQAIpAAIQAgBAJBE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.UserManagement" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAIAAAAAA=</HashCode>
+      <FileName>UserManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.Usertype" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEgACABACCAAIAAQBUQAAABiCIAAAQAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WTProject.UserType" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>UserType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.UserUserTypeMapper" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAAAAAAA=</HashCode>
+      <FileName>UserUserTypeMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.LoginUser">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAIAAAAAEAA=</HashCode>
+      <FileName>LoginUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="u" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WTProject.MyProfiel" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAwAEEAAEAgAAAAAAAUABCAAAAAAAIAAgA=</HashCode>
+      <FileName>MyProfile.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WTProject.MyProfile" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAQAAIAAAI=</HashCode>
+      <FileName>Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

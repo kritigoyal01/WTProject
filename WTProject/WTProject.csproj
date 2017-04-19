@@ -129,6 +129,7 @@
     <Content Include="RegisterUser.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="Admin_Master.Master" />
+    <Content Include="Class Diagram.cd" />
     <None Include="DBInteraction.dbml.layout">
       <DependentUpon>DBInteraction.dbml</DependentUpon>
     </None>
