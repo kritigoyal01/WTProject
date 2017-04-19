@@ -19,8 +19,9 @@ namespace WTProject
                      where n.username == name &&
                      n.pass == pass
                      select n;
-
+            
             return u;
+
         }
         public Boolean ChangePassword()
         {

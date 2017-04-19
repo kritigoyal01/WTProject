@@ -15,6 +15,6 @@
         <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="WTProject.DBInteractiobDataContext" EntityTypeName="" TableName="Newsletters">
         </asp:LinqDataSource>
         <p>&nbsp;</p>
-        <asp:Button ID="Button1" runat="server" Text="Add A NewsLetter" />
+        <asp:Button ID="Button1" runat="server" Text="Add A NewsLetter" PostBackUrl="~/NewsLetterForm.aspx" />
 </asp:Content>
     

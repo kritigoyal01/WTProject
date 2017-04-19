@@ -17,16 +17,6 @@
       <Association Name="Cuisine_Post" Member="Posts" ThisKey="cuisineid" OtherKey="cuisineid" Type="Post" />
     </Type>
   </Table>
-  <Table Name="dbo.Newsletter" Member="Newsletters">
-    <Type Name="Newsletter">
-      <Column Name="newsid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="newstitle" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-      <Column Name="newssubject" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-      <Column Name="newscontent" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-      <Column Name="header" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-      <Column Name="footer" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.PostsTagMapper" Member="PostsTagMappers">
     <Type Name="PostsTagMapper">
       <Column Name="tagsid" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -105,6 +95,16 @@
       <Association Name="Post_Rating" Member="Ratings" ThisKey="postsid" OtherKey="postsid" Type="Rating" />
       <Association Name="Cuisine_Post" Member="Cuisine" ThisKey="cuisineid" OtherKey="cuisineid" Type="Cuisine" IsForeignKey="true" />
       <Association Name="User_Post" Member="User" ThisKey="userid" OtherKey="userid" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Newsletter" Member="Newsletters">
+    <Type Name="Newsletter">
+      <Column Name="newsid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="newstitle" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="newssubject" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="newscontent" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="header" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
+      <Column Name="footer" Type="System.String" DbType="VarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

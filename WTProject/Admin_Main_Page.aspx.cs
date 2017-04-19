@@ -9,9 +9,12 @@ namespace WTProject
 {
     public partial class Admin_Main_Page : System.Web.UI.Page
     {
+       // User u;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Response.Redirect("Admin_Posts.aspx");
+          //  u.userid = 1;
+          //  Response.Redirect("Login.aspx");
+           
         }
 
         protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)

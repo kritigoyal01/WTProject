@@ -9,11 +9,24 @@ namespace WTProject
 {
     public partial class MyProfile : System.Web.UI.Page
     {
+        //User u;
         protected void Page_Load(object sender, EventArgs e)
         {
+          
             
         }
 
+       /* protected void LoginButton_Click(object sendet,EventArgs e)
+        {
+            if(u.userid ==1 )
+            {
+                Response.Redirect("Admin_Main_Page.aspx");
+            }
+            else
+            {
+                Response.Redirect("Default.aspx");
+             }
+        }*/
         private bool SiteSpecificAuthenticationMethod(string UserName, string Password)
         {
             try

@@ -36,9 +36,6 @@ namespace WTProject
     partial void InsertCuisine(Cuisine instance);
     partial void UpdateCuisine(Cuisine instance);
     partial void DeleteCuisine(Cuisine instance);
-    partial void InsertNewsletter(Newsletter instance);
-    partial void UpdateNewsletter(Newsletter instance);
-    partial void DeleteNewsletter(Newsletter instance);
     partial void InsertPostsTagMapper(PostsTagMapper instance);
     partial void UpdatePostsTagMapper(PostsTagMapper instance);
     partial void DeletePostsTagMapper(PostsTagMapper instance);
@@ -63,6 +60,9 @@ namespace WTProject
     partial void InsertPost(Post instance);
     partial void UpdatePost(Post instance);
     partial void DeletePost(Post instance);
+    partial void InsertNewsletter(Newsletter instance);
+    partial void UpdateNewsletter(Newsletter instance);
+    partial void DeleteNewsletter(Newsletter instance);
     #endregion
 		
 		public DBInteractiobDataContext() : 
@@ -108,14 +108,6 @@ namespace WTProject
 			get
 			{
 				return this.GetTable<Cuisine>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Newsletter> Newsletters
-		{
-			get
-			{
-				return this.GetTable<Newsletter>();
 			}
 		}
 		
@@ -180,6 +172,14 @@ namespace WTProject
 			get
 			{
 				return this.GetTable<Post>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Newsletter> Newsletters
+		{
+			get
+			{
+				return this.GetTable<Newsletter>();
 			}
 		}
 	}
@@ -494,188 +494,6 @@ namespace WTProject
 		{
 			this.SendPropertyChanging();
 			entity.Cuisine = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Newsletter")]
-	public partial class Newsletter : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _newsid;
-		
-		private string _newstitle;
-		
-		private string _newssubject;
-		
-		private string _newscontent;
-		
-		private string _header;
-		
-		private string _footer;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnnewsidChanging(int value);
-    partial void OnnewsidChanged();
-    partial void OnnewstitleChanging(string value);
-    partial void OnnewstitleChanged();
-    partial void OnnewssubjectChanging(string value);
-    partial void OnnewssubjectChanged();
-    partial void OnnewscontentChanging(string value);
-    partial void OnnewscontentChanged();
-    partial void OnheaderChanging(string value);
-    partial void OnheaderChanged();
-    partial void OnfooterChanging(string value);
-    partial void OnfooterChanged();
-    #endregion
-		
-		public Newsletter()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newsid", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int newsid
-		{
-			get
-			{
-				return this._newsid;
-			}
-			set
-			{
-				if ((this._newsid != value))
-				{
-					this.OnnewsidChanging(value);
-					this.SendPropertyChanging();
-					this._newsid = value;
-					this.SendPropertyChanged("newsid");
-					this.OnnewsidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newstitle", DbType="VarChar(225)")]
-		public string newstitle
-		{
-			get
-			{
-				return this._newstitle;
-			}
-			set
-			{
-				if ((this._newstitle != value))
-				{
-					this.OnnewstitleChanging(value);
-					this.SendPropertyChanging();
-					this._newstitle = value;
-					this.SendPropertyChanged("newstitle");
-					this.OnnewstitleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newssubject", DbType="VarChar(225)")]
-		public string newssubject
-		{
-			get
-			{
-				return this._newssubject;
-			}
-			set
-			{
-				if ((this._newssubject != value))
-				{
-					this.OnnewssubjectChanging(value);
-					this.SendPropertyChanging();
-					this._newssubject = value;
-					this.SendPropertyChanged("newssubject");
-					this.OnnewssubjectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newscontent", DbType="VarChar(225)")]
-		public string newscontent
-		{
-			get
-			{
-				return this._newscontent;
-			}
-			set
-			{
-				if ((this._newscontent != value))
-				{
-					this.OnnewscontentChanging(value);
-					this.SendPropertyChanging();
-					this._newscontent = value;
-					this.SendPropertyChanged("newscontent");
-					this.OnnewscontentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_header", DbType="VarChar(225)")]
-		public string header
-		{
-			get
-			{
-				return this._header;
-			}
-			set
-			{
-				if ((this._header != value))
-				{
-					this.OnheaderChanging(value);
-					this.SendPropertyChanging();
-					this._header = value;
-					this.SendPropertyChanged("header");
-					this.OnheaderChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_footer", DbType="VarChar(225)")]
-		public string footer
-		{
-			get
-			{
-				return this._footer;
-			}
-			set
-			{
-				if ((this._footer != value))
-				{
-					this.OnfooterChanging(value);
-					this.SendPropertyChanging();
-					this._footer = value;
-					this.SendPropertyChanged("footer");
-					this.OnfooterChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -2279,6 +2097,188 @@ namespace WTProject
 		{
 			this.SendPropertyChanging();
 			entity.Post = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Newsletter")]
+	public partial class Newsletter : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _newsid;
+		
+		private string _newstitle;
+		
+		private string _newssubject;
+		
+		private string _newscontent;
+		
+		private string _header;
+		
+		private string _footer;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnnewsidChanging(int value);
+    partial void OnnewsidChanged();
+    partial void OnnewstitleChanging(string value);
+    partial void OnnewstitleChanged();
+    partial void OnnewssubjectChanging(string value);
+    partial void OnnewssubjectChanged();
+    partial void OnnewscontentChanging(string value);
+    partial void OnnewscontentChanged();
+    partial void OnheaderChanging(string value);
+    partial void OnheaderChanged();
+    partial void OnfooterChanging(string value);
+    partial void OnfooterChanged();
+    #endregion
+		
+		public Newsletter()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newsid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int newsid
+		{
+			get
+			{
+				return this._newsid;
+			}
+			set
+			{
+				if ((this._newsid != value))
+				{
+					this.OnnewsidChanging(value);
+					this.SendPropertyChanging();
+					this._newsid = value;
+					this.SendPropertyChanged("newsid");
+					this.OnnewsidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newstitle", DbType="VarChar(225)")]
+		public string newstitle
+		{
+			get
+			{
+				return this._newstitle;
+			}
+			set
+			{
+				if ((this._newstitle != value))
+				{
+					this.OnnewstitleChanging(value);
+					this.SendPropertyChanging();
+					this._newstitle = value;
+					this.SendPropertyChanged("newstitle");
+					this.OnnewstitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newssubject", DbType="VarChar(225)")]
+		public string newssubject
+		{
+			get
+			{
+				return this._newssubject;
+			}
+			set
+			{
+				if ((this._newssubject != value))
+				{
+					this.OnnewssubjectChanging(value);
+					this.SendPropertyChanging();
+					this._newssubject = value;
+					this.SendPropertyChanged("newssubject");
+					this.OnnewssubjectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newscontent", DbType="VarChar(225)")]
+		public string newscontent
+		{
+			get
+			{
+				return this._newscontent;
+			}
+			set
+			{
+				if ((this._newscontent != value))
+				{
+					this.OnnewscontentChanging(value);
+					this.SendPropertyChanging();
+					this._newscontent = value;
+					this.SendPropertyChanged("newscontent");
+					this.OnnewscontentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_header", DbType="VarChar(225)")]
+		public string header
+		{
+			get
+			{
+				return this._header;
+			}
+			set
+			{
+				if ((this._header != value))
+				{
+					this.OnheaderChanging(value);
+					this.SendPropertyChanging();
+					this._header = value;
+					this.SendPropertyChanged("header");
+					this.OnheaderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_footer", DbType="VarChar(225)")]
+		public string footer
+		{
+			get
+			{
+				return this._footer;
+			}
+			set
+			{
+				if ((this._footer != value))
+				{
+					this.OnfooterChanging(value);
+					this.SendPropertyChanging();
+					this._footer = value;
+					this.SendPropertyChanged("footer");
+					this.OnfooterChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }
